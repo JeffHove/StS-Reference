@@ -48,44 +48,42 @@ const theChamp: Enemy = $derived({
   flowchart: aLevel.v >= 19
     ? `
     flowchart-elk TB
-      A(${defensiveStance.effect}<img src=${defensiveStance.intent} class="h-10 object-contain" /><span class="text-xs">Max Uses: 2\nMax Consecutive: 1\n${aLevel.v >= 19 ? "30%" : "15%"}</span>)
-      B(${faceSlap.effect}<img src=${faceSlap.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n25% + Invalid Left/Right%</span>)
-      C(${taunt.effect}<img src=${taunt.intent} class="h-10 object-contain" />)
-      D(${heavySlash.effect}<img src=${heavySlash.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n45% + Invalid Left%</span>)
-      F(${execute.effect}<img src=${execute.intent} class="h-10 object-contain" />)
-      G(${anger.effect}<img src=${anger.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: HP below 50%. Uses next turn.</span>)
-      subgraph Main
+      subgraph Main [Main.\n<span class="text-xs">Invalid moves, when rolled, use next instead.</span>]
         direction LR
+        A(${defensiveStance.effect}<img src=${defensiveStance.intent} class="h-10 object-contain" /><span class="text-xs">Max Uses: 2\nMax Consecutive: 1\n${aLevel.v >= 19 ? "30%" : "15%"}</span>)
+        B(${faceSlap.effect}<img src=${faceSlap.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n25%</span>)
+        D(${heavySlash.effect}<img src=${heavySlash.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n45%</span>)
         A==>B<==>D
       end
       subgraph Phase1 [Phase 1]
         subgraph Turn4 [Turn 4, 8, 12, etc.]
-          C
+          C(${taunt.effect}<img src=${taunt.intent} class="h-10 object-contain" />)
         end
       end
       subgraph Phase2 [Phase 2]
+        F(${execute.effect}<img src=${execute.intent} class="h-10 object-contain" />)
+        G(${anger.effect}<img src=${anger.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: HP below 50%. Uses next turn.</span>)
         G==>F==>M1(Main)==>M2(Main)==>F
       end
   `
     : `
     flowchart-elk TB
-      A(${defensiveStance.effect}<img src=${defensiveStance.intent} class="h-10 object-contain" /><span class="text-xs">Max Uses: 2\nMax Consecutive: 1\n${aLevel.v >= 19 ? "30%" : "15%"}</span>)
-      B(${faceSlap.effect}<img src=${faceSlap.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n25% + Invalid Left/Right%</span>)
-      C(${taunt.effect}<img src=${taunt.intent} class="h-10 object-contain" />)
-      D(${heavySlash.effect}<img src=${heavySlash.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n45% + Invalid Left%</span>)
-      E(${gloat.effect}<img src=${gloat.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n15% + Invalid Left%</span>)
-      F(${execute.effect}<img src=${execute.intent} class="h-10 object-contain" />)
-      G(${anger.effect}<img src=${anger.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: HP below 50%. Uses next turn.</span>)
-      subgraph Main
+      subgraph Main [Main.\n<span class="text-xs">Invalid moves, when rolled, use next instead.</span>]
         direction LR
+        A(${defensiveStance.effect}<img src=${defensiveStance.intent} class="h-10 object-contain" /><span class="text-xs">Max Uses: 2\nMax Consecutive: 1\n${aLevel.v >= 19 ? "30%" : "15%"}</span>)
+        B(${faceSlap.effect}<img src=${faceSlap.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n25%</span>)
+        D(${heavySlash.effect}<img src=${heavySlash.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n45%</span>)
+        E(${gloat.effect}<img src=${gloat.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n15%</span>)
         A==>E==>B<==>D
       end
       subgraph Phase1 [Phase 1]
         subgraph Turn4 [Turn 4, 8, 12, etc.]
-          C
+          C(${taunt.effect}<img src=${taunt.intent} class="h-10 object-contain" />)
         end
       end
       subgraph Phase2 [Phase 2]
+        F(${execute.effect}<img src=${execute.intent} class="h-10 object-contain" />)
+        G(${anger.effect}<img src=${anger.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: HP below 50%. Uses next turn.</span>)
         G==>F==>M1(Main)==>M2(Main)==>F
       end
   `,
