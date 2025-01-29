@@ -23,9 +23,6 @@ const stab: Move = {
 const gremlinLeader: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
-      A(${encourage.effect}<img src=${encourage.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
-      B(${rally.effect}<img src=${rally.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
-      C(${stab.effect}<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
       B0(<img src=${rally.intent} class="h-10 object-contain" /><span class="text-xs">75%</span>)
       C0(<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">25%</span>)
       A1(<img src=${encourage.intent} class="h-10 object-contain" /><span class="text-xs">37.5%</span>)
@@ -34,14 +31,6 @@ const gremlinLeader: Enemy = $derived({
       C1(<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">50%</span>)
       A2(<img src=${encourage.intent} class="h-10 object-contain" /><span class="text-xs">66%</span>)
       C2(<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">34%</span>)
-      0Gremlin~~~Moves
-      1Gremlin~~~Moves
-      2Gremlin~~~Moves
-      subgraph Moves
-        A
-        B
-        C
-      end
       subgraph 0Gremlin [0 Gremlins]
         B0
         C0
@@ -60,6 +49,12 @@ const gremlinLeader: Enemy = $derived({
         A2
         C2
       end
+  `,
+  moves: `
+    flowchart-elk TB
+      A(${encourage.effect}<img src=${encourage.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
+      B(${rally.effect}<img src=${rally.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
+      C(${stab.effect}<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
   `,
   img: `${base}/assets/act2/elites/gremlin-leader.webp`,
   name: "Gremlin Leader",
