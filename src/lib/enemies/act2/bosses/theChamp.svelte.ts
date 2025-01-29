@@ -62,7 +62,7 @@ const theChamp: Enemy = $derived({
       end
       subgraph Phase2 [Phase 2]
         F(${execute.effect}<img src=${execute.intent} class="h-10 object-contain" />)
-        G(${anger.effect}<img src=${anger.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: HP below 50%. Uses next turn.</span>)
+        G(${anger.effect}<img src=${anger.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: HP below 50%. Does NOT interupt current intent.</span>)
         G==>F==>M1(Main)==>M2(Main)==>F
       end
   `
@@ -83,7 +83,7 @@ const theChamp: Enemy = $derived({
       end
       subgraph Phase2 [Phase 2]
         F(${execute.effect}<img src=${execute.intent} class="h-10 object-contain" />)
-        G(${anger.effect}<img src=${anger.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: HP below 50%. Uses next turn.</span>)
+        G(${anger.effect}<img src=${anger.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: HP below 50%. Does NOT interupt current intent.</span>)
         G==>F==>M1(Main)==>M2(Main)==>F
       end
   `,
