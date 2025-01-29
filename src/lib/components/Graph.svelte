@@ -13,6 +13,7 @@
       fontFamily: "Kreon, serif",
       fontSize: "24px",
       lineColor: "#ffffff",
+      clusterBorder: "#ffffff",
       primaryBorderColor: "#ffffff",
       primaryColor: "#000000",
       primaryTextColor: "#ffffff",
