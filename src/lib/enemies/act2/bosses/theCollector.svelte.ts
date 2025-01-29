@@ -56,8 +56,8 @@ const theCollector: Enemy = $derived({
   `,
   moves: `
     flowchart-elk TB
-      A(${buff.effect}<img src=${buff.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1</span>)
-      B(${fireball.effect}<img src=${fireball.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2</span>)
+      A(${buff.effect}<img src=${buff.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
+      B(${fireball.effect}<img src=${fireball.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2</span>)
       C(${megaDebuff.effect}<img src=${megaDebuff.intent} class="h-10 object-contain" />)
       D(${spawn.effect}<img src=${spawn.intent} class="h-10 object-contain" />)
   `,

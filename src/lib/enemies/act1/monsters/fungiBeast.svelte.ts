@@ -17,8 +17,8 @@ const grow: Move = $derived({
 const fungiBeast: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
-      A(${bite.effect}<img src=${bite.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n60%</span>)
-      B(${grow.effect}<img src=${grow.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n40%</span>)
+      A(${bite.effect}<img src=${bite.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n60%</span>)
+      B(${grow.effect}<img src=${grow.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n40%</span>)
   `,
   img: `${base}/assets/act1/monsters/fungi-beast.webp`,
   name: "Fungi Beast",

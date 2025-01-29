@@ -36,17 +36,17 @@ const writhingMass: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
       subgraph Turn1 [Turn 1]
-        B(${flail.effect}<img src=${flail.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n25%</span>)
-        C(${wither.effect}<img src=${wither.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n25%</span>)
-        D(${multiStrike.effect}<img src=${multiStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n25%</span>)
-        E(${strongStrike.effect}<img src=${strongStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n25%</span>)
+        B(${flail.effect}<img src=${flail.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n25%</span>)
+        C(${wither.effect}<img src=${wither.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n25%</span>)
+        D(${multiStrike.effect}<img src=${multiStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n25%</span>)
+        E(${strongStrike.effect}<img src=${strongStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n25%</span>)
       end
       subgraph Turn2+ [Turn 2+]
         A(${implant.effect}<img src=${implant.intent} class="h-10 object-contain" /><span class="text-xs">Max Uses: 1\n10%</span>)
-        B2(${flail.effect}<img src=${flail.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n30%</span>)
-        C2(${wither.effect}<img src=${wither.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n20%</span>)
-        D2(${multiStrike.effect}<img src=${multiStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n30%</span>)
-        E2(${strongStrike.effect}<img src=${strongStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n10%</span>)
+        B2(${flail.effect}<img src=${flail.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n30%</span>)
+        C2(${wither.effect}<img src=${wither.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n20%</span>)
+        D2(${multiStrike.effect}<img src=${multiStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n30%</span>)
+        E2(${strongStrike.effect}<img src=${strongStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n10%</span>)
       end
   `,
   img: `${base}/assets/act3/monsters/writhing-mass.webp`,

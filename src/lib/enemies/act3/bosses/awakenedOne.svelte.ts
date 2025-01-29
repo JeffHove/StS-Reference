@@ -44,16 +44,16 @@ const awakenedOne: Enemy = $derived({
     flowchart-elk LR
       subgraph Unawakened [<img src=${base}/assets/act3/bosses/awakened-one-unawakened.webp class="h-10 object-contain inline" />]
         direction LR
-        A(${slash.effect}<img src=${slash.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\nTurn 1: 100%\n75%</span>)
-        B(${soulStrike.effect}<img src=${soulStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\nTurn 1: 0%\n25%</span>)
+        A(${slash.effect}<img src=${slash.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\nTurn 1: 100%\n75%</span>)
+        B(${soulStrike.effect}<img src=${soulStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\nTurn 1: 0%\n25%</span>)
       end
       C(${rebirth.effect}<img src=${rebirth.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: 0 HP.</span>)
       A2(${darkEcho.effect}<img src=${darkEcho.intent} class="h-10 object-contain" />)
       C==>A2==>Awakened
       subgraph Awakened [<img src=${base}/assets/act3/bosses/awakened-one-awakened.webp class="h-10 object-contain inline" />]
         direction LR
-        B2(${sludge.effect}<img src=${sludge.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n50%</span>)
-        C2(${tackle.effect}<img src=${tackle.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n50%</span>)
+        B2(${sludge.effect}<img src=${sludge.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n50%</span>)
+        C2(${tackle.effect}<img src=${tackle.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n50%</span>)
       end
   `,
   img: `${base}/assets/act3/bosses/awakened-one-unawakened.webp`,

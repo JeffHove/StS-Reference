@@ -36,7 +36,7 @@ const gremlinNob: Enemy = $derived({
     : `
     flowchart-elk LR
       A(${bellow.effect}<img src=${bellow.intent} class="h-10 object-contain" />)
-      B(${rush.effect}<img src=${rush.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n67%</span>)
+      B(${rush.effect}<img src=${rush.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n67%</span>)
       C(${skullBash.effect}<img src=${skullBash.intent} class="h-10 object-contain" /><span class="text-xs">33%</span>)
       A==>Turn2+
       subgraph Turn2+ [Turn 2+]

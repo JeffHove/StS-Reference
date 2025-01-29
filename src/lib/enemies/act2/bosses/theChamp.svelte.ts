@@ -50,9 +50,9 @@ const theChamp: Enemy = $derived({
     flowchart-elk TB
       subgraph Main [Main.\n<span class="text-xs">Invalid moves, when rolled, use next instead.</span>]
         direction LR
-        A(${defensiveStance.effect}<img src=${defensiveStance.intent} class="h-10 object-contain" /><span class="text-xs">Max Uses: 2\nMax Consecutive: 1\n${aLevel.v >= 19 ? "30%" : "15%"}</span>)
-        B(${faceSlap.effect}<img src=${faceSlap.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n25%</span>)
-        D(${heavySlash.effect}<img src=${heavySlash.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n45%</span>)
+        A(${defensiveStance.effect}<img src=${defensiveStance.intent} class="h-10 object-contain" /><span class="text-xs">Max Uses: 2\nMax In a Row: 1\n${aLevel.v >= 19 ? "30%" : "15%"}</span>)
+        B(${faceSlap.effect}<img src=${faceSlap.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n25%</span>)
+        D(${heavySlash.effect}<img src=${heavySlash.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n45%</span>)
         A==>B<==>D
       end
       subgraph Phase1 [Phase 1]
@@ -70,10 +70,10 @@ const theChamp: Enemy = $derived({
     flowchart-elk TB
       subgraph Main [Main.\n<span class="text-xs">Invalid moves, when rolled, use next instead.</span>]
         direction LR
-        A(${defensiveStance.effect}<img src=${defensiveStance.intent} class="h-10 object-contain" /><span class="text-xs">Max Uses: 2\nMax Consecutive: 1\n${aLevel.v >= 19 ? "30%" : "15%"}</span>)
-        B(${faceSlap.effect}<img src=${faceSlap.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n25%</span>)
-        D(${heavySlash.effect}<img src=${heavySlash.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n45%</span>)
-        E(${gloat.effect}<img src=${gloat.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n15%</span>)
+        A(${defensiveStance.effect}<img src=${defensiveStance.intent} class="h-10 object-contain" /><span class="text-xs">Max Uses: 2\nMax In a Row: 1\n${aLevel.v >= 19 ? "30%" : "15%"}</span>)
+        B(${faceSlap.effect}<img src=${faceSlap.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n25%</span>)
+        D(${heavySlash.effect}<img src=${heavySlash.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n45%</span>)
+        E(${gloat.effect}<img src=${gloat.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n15%</span>)
         A==>E==>B<==>D
       end
       subgraph Phase1 [Phase 1]

@@ -28,20 +28,20 @@ const spireGrowth: Enemy = $derived({
         C(${constrict.effect}<img src=${constrict.intent} class="h-10 object-contain" />)
       end
       subgraph isC [Is Constricted or Previous Move <img src=${constrict.intent} class="h-10 object-contain inline" />]
-        A2(${quickTackle.effect}<img src=${quickTackle.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n50%</span>)
-        B(${smash.effect}<img src=${smash.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n50%</span>)
+        A2(${quickTackle.effect}<img src=${quickTackle.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n50%</span>)
+        B(${smash.effect}<img src=${smash.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n50%</span>)
       end
       C==>isC
   `
     : `
     flowchart-elk TB
       subgraph notC [Not Constricted]
-        A(${quickTackle.effect}<img src=${quickTackle.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n50%</span>)
+        A(${quickTackle.effect}<img src=${quickTackle.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n50%</span>)
         C(${constrict.effect}<img src=${constrict.intent} class="h-10 object-contain" /><span class="text-xs">50%</span>)
       end
       subgraph isC [Is Constricted or Previous Move <img src=${constrict.intent} class="h-10 object-contain inline" />]
-        A2(${quickTackle.effect}<img src=${quickTackle.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n50%</span>)
-        B(${smash.effect}<img src=${smash.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n50%</span>)
+        A2(${quickTackle.effect}<img src=${quickTackle.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n50%</span>)
+        B(${smash.effect}<img src=${smash.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n50%</span>)
       end
       C==>isC
   `,

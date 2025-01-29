@@ -23,9 +23,9 @@ const bellow: Move = $derived({
 const jawWorm: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
-      A(${chomp.effect}<img src=${chomp.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\nAct 1, Turn 1: 100%\n25%</span>)
-      B(${thrash.effect}<img src=${thrash.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n30%</span>)
-      C(${bellow.effect}<img src=${bellow.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n45%</span>)
+      A(${chomp.effect}<img src=${chomp.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\nAct 1, Turn 1: 100%\n25%</span>)
+      B(${thrash.effect}<img src=${thrash.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n30%</span>)
+      C(${bellow.effect}<img src=${bellow.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n45%</span>)
   `,
   img: `${base}/assets/act1/monsters/jaw-worm.webp`,
   name: "Jaw Worm",

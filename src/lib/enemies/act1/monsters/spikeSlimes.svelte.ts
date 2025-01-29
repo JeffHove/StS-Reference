@@ -45,13 +45,13 @@ const spikeSlimes: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
       subgraph Large [<img src=${base}/assets/act1/monsters/spike-slime-l.webp class="h-10 object-contain inline" />]
-        A(${flameTackleL.effect}<img src=${flameTackleL.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n30%</span>)
-        B(${lickL.effect}<img src=${lickL.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: ${aLevel.v >= 17 ? 1 : 2}\n70%</span>)
+        A(${flameTackleL.effect}<img src=${flameTackleL.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n30%</span>)
+        B(${lickL.effect}<img src=${lickL.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: ${aLevel.v >= 17 ? 1 : 2}\n70%</span>)
         C(${split.effect}<img src=${split.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: HP reaches 50% or lower</span>)
       end
       subgraph Medium [<img src=${base}/assets/act1/monsters/spike-slime-m.webp class="h-10 object-contain inline" />]
-        A2(${flameTackleM.effect}<img src=${flameTackleM.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n30%</span>)
-        B2(${lickM.effect}<img src=${lickM.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: ${aLevel.v >= 17 ? 1 : 2}\n70%</span>)
+        A2(${flameTackleM.effect}<img src=${flameTackleM.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n30%</span>)
+        B2(${lickM.effect}<img src=${lickM.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: ${aLevel.v >= 17 ? 1 : 2}\n70%</span>)
       end
       subgraph Small [<img src=${base}/assets/act1/monsters/spike-slime-s.webp class="h-10 object-contain inline" />]
         A3(${tackle.effect}<img src=${tackle.intent} class="h-10 object-contain" />)

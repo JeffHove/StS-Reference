@@ -23,9 +23,9 @@ const stab: Move = {
 const gremlinLeader: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
-      A(${encourage.effect}<img src=${encourage.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1</span>)
-      B(${rally.effect}<img src=${rally.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1</span>)
-      C(${stab.effect}<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1</span>)
+      A(${encourage.effect}<img src=${encourage.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
+      B(${rally.effect}<img src=${rally.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
+      C(${stab.effect}<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
       B0(<img src=${rally.intent} class="h-10 object-contain" /><span class="text-xs">75%</span>)
       C0(<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">25%</span>)
       A1(<img src=${encourage.intent} class="h-10 object-contain" /><span class="text-xs">37.5%</span>)

@@ -48,9 +48,9 @@ const darkling: Enemy = $derived({
         C2(<img src=${harden.intent} class="h-10 object-contain" /><span class="text-xs">30%</span>)
       end
       subgraph Moves
-        A(${nip.effect}<img src=${nip.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2</span>)
-        B(${chomp.effect}<img src=${chomp.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1</span>)
-        C(${harden.effect}<img src=${harden.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1</span>)
+        A(${nip.effect}<img src=${nip.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2</span>)
+        B(${chomp.effect}<img src=${chomp.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
+        C(${harden.effect}<img src=${harden.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
       end
       Middle~~~Moves
       Outer~~~Moves

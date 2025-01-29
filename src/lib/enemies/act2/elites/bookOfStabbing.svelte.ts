@@ -17,8 +17,8 @@ const singleStab: Move = $derived({
 const bookOfStabbing: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
-      A(*${multiStab.name}*\n${multiStab.effect}<img src=${multiStab.intent} class="h-10 object-contain" /><span class="text-xs">Unblocked: Wound into discard\nMax Consecutive: 2\n85%</span>)
-      B(*${singleStab.name}*\n${singleStab.effect}<img src=${singleStab.intent} class="h-10 object-contain" /><span class="text-xs">Unblocked: Wound into discard\nMax Consecutive: 1\n15%</span>)
+      A(*${multiStab.name}*\n${multiStab.effect}<img src=${multiStab.intent} class="h-10 object-contain" /><span class="text-xs">Unblocked: Wound into discard\nMax In a Row: 2\n85%</span>)
+      B(*${singleStab.name}*\n${singleStab.effect}<img src=${singleStab.intent} class="h-10 object-contain" /><span class="text-xs">Unblocked: Wound into discard\nMax In a Row: 1\n15%</span>)
   `,
   img: `${base}/assets/act2/elites/book-of-stabbing.webp`,
   name: "Book of Stabbing",

@@ -27,12 +27,12 @@ const louses: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
       subgraph Red [<img src=${base}/assets/act1/monsters/red-louse.webp class="h-10 object-contain inline" />]
-        A(${bite.effect}<img src=${bite.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n75%</span>)
-        B(${grow.effect}<img src=${grow.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: ${aLevel.v >= 17 ? 1 : 2}\n25%</span>)
+        A(${bite.effect}<img src=${bite.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n75%</span>)
+        B(${grow.effect}<img src=${grow.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: ${aLevel.v >= 17 ? 1 : 2}\n25%</span>)
       end
       subgraph Green [<img src=${base}/assets/act1/monsters/green-louse.webp class="h-10 object-contain inline" />]
-        A2(${bite.effect}<img src=${bite.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n75%</span>)
-        B2(${spitWeb.effect}<img src=${spitWeb.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: ${aLevel.v >= 17 ? 1 : 2}\n25%</span>)
+        A2(${bite.effect}<img src=${bite.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n75%</span>)
+        B2(${spitWeb.effect}<img src=${spitWeb.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: ${aLevel.v >= 17 ? 1 : 2}\n25%</span>)
       end
   `,
   img: `${base}/assets/act1/monsters/louses.webp`,

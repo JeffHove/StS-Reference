@@ -24,9 +24,9 @@ const nemesis: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
       subgraph Moves
-        A(${debuff.effect}<img src=${debuff.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1</span>)
-        B(${attack.effect}<img src=${attack.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2</span>)
-        C(${scythe.effect}<img src=${scythe.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1</span>)
+        A(${debuff.effect}<img src=${debuff.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
+        B(${attack.effect}<img src=${attack.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2</span>)
+        C(${scythe.effect}<img src=${scythe.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
       end
       subgraph Turn1 [Turn 1]
         A1(<img src=${debuff.intent} class="h-10 object-contain" /><span class="text-xs">50%</span>)

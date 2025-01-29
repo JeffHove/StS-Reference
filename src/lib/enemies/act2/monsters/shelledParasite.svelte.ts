@@ -23,9 +23,9 @@ const fell: Move = $derived({
 const shelledParasite: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
-      A(${doubleStrike.effect}<img src=${doubleStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\nTurn 1: ${aLevel.v >= 17 ? "0%" : "50%"}\n40%</span>)
-      B(${suck.effect}<img src=${suck.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\nTurn 1: ${aLevel.v >= 17 ? "0%" : "50%"}\n40%</span>)
-      C(${fell.effect}<img src=${fell.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\nTurn 1: ${aLevel.v >= 17 ? "100%" : "0%"}\n20%</span>)
+      A(${doubleStrike.effect}<img src=${doubleStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\nTurn 1: ${aLevel.v >= 17 ? "0%" : "50%"}\n40%</span>)
+      B(${suck.effect}<img src=${suck.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\nTurn 1: ${aLevel.v >= 17 ? "0%" : "50%"}\n40%</span>)
+      C(${fell.effect}<img src=${fell.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\nTurn 1: ${aLevel.v >= 17 ? "100%" : "0%"}\n20%</span>)
       D(Stunned<img src='${base}/assets/intents/stun.png' class="h-10 object-contain" /><span class="text-xs">Trigger: Platted Armor reduced to 0</span>)
   `,
   img: `${base}/assets/act2/monsters/shelled-parasite.webp`,

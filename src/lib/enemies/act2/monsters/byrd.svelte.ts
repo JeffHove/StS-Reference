@@ -35,9 +35,9 @@ const headbutt: Move = {
 const byrd: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
-      A(${caw.effect}<img src=${caw.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\nTurn 1: 37.5%\n30%</span>)
-      B(${peck.effect}<img src=${peck.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\nTurn 1: 62.5%\n50%</span>)
-      C(${swoop.effect}<img src=${swoop.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\nTurn 1: 0%\n20%</span>)
+      A(${caw.effect}<img src=${caw.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\nTurn 1: 37.5%\n30%</span>)
+      B(${peck.effect}<img src=${peck.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\nTurn 1: 62.5%\n50%</span>)
+      C(${swoop.effect}<img src=${swoop.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\nTurn 1: 0%\n20%</span>)
       D(${fly.effect}<img src=${fly.intent} class="h-10 object-contain" />)
       E(${headbutt.effect}<img src=${headbutt.intent} class="h-10 object-contain" />)
       F(Stunned<img src='${base}/assets/intents/stun.png' class="h-10 object-contain" />)

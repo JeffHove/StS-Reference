@@ -63,8 +63,8 @@ const bronzeAutomaton: Enemy = $derived({
       end
       subgraph Orb [<img src=${base}/assets/act2/bosses/bronze-orb.webp class="h-10 object-contain inline" />]
         E(${stasis.effect}<img src=${stasis.intent} class="h-10 object-contain" /><span class="text-xs">75%\nCard Stolen: 0%</span>)  
-        F(${beam.effect}<img src=${beam.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n7.5%\nCard Stolen: 30%</span>)  
-        G(${supportBeam.effect}<img src=${supportBeam.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n17.5%\nCard Stolen: 70%</span>)  
+        F(${beam.effect}<img src=${beam.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n7.5%\nCard Stolen: 30%</span>)  
+        G(${supportBeam.effect}<img src=${supportBeam.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n17.5%\nCard Stolen: 70%</span>)  
       end
   `
     : `
@@ -82,8 +82,8 @@ const bronzeAutomaton: Enemy = $derived({
       end
       subgraph Orb [<img src=${base}/assets/act2/bosses/bronze-orb.webp class="h-10 object-contain inline" />]
         F(${stasis.effect}<img src=${stasis.intent} class="h-10 object-contain" /><span class="text-xs">75%\nCard Stolen: 0%</span>)  
-        G(${beam.effect}<img src=${beam.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n7.5%\nCard Stolen: 30%</span>)  
-        H(${supportBeam.effect}<img src=${supportBeam.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n17.5%\nCard Stolen: 70%</span>)  
+        G(${beam.effect}<img src=${beam.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n7.5%\nCard Stolen: 30%</span>)  
+        H(${supportBeam.effect}<img src=${supportBeam.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n17.5%\nCard Stolen: 70%</span>)  
       end
   `,
   img: `${base}/assets/act2/bosses/bronze-automaton.webp`,

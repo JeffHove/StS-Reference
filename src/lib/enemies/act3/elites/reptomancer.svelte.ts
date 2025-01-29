@@ -55,9 +55,9 @@ const reptomancer: Enemy = $derived({
   `,
   moves: `
     flowchart-elk TB
-      A(${summon.effect}<img src=${summon.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2</span>)
-      B(${snakeStrike.effect}<img src=${snakeStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1</span>)
-      C(${bigBite.effect}<img src=${bigBite.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1</span>)
+      A(${summon.effect}<img src=${summon.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2</span>)
+      B(${snakeStrike.effect}<img src=${snakeStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
+      C(${bigBite.effect}<img src=${bigBite.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
   `,
   img: `${base}/assets/act3/elites/reptomancer.webp`,
   name: "Reptomancer",

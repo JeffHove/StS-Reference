@@ -28,8 +28,8 @@ const redSlaver: Enemy = $derived({
       A2(${stab.effect}<img src=${stab.intent} class="h-10 object-contain" />)
       B(${scrape.effect}<img src=${scrape.intent} class="h-10 object-contain" />)
       C(${entangle.effect}<img src=${entangle.intent} class="h-10 object-contain" /><span class="text-xs">Turn 2+: 25%</span>)
-      A3(${stab.effect}<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n45%</span>)
-      B2(${scrape.effect}<img src=${scrape.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: ${aLevel.v >= 17 ? 1 : 2}\n55%</span>)
+      A3(${stab.effect}<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n45%</span>)
+      B2(${scrape.effect}<img src=${scrape.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: ${aLevel.v >= 17 ? 1 : 2}\n55%</span>)
       A==>B
       C==>Used
       subgraph Used [Entangle Used]
@@ -49,8 +49,8 @@ const redSlaver: Enemy = $derived({
       B(${scrape.effect}<img src=${scrape.intent} class="h-10 object-contain" />)
       B2(${scrape.effect}<img src=${scrape.intent} class="h-10 object-contain" />)
       C(${entangle.effect}<img src=${entangle.intent} class="h-10 object-contain" /><span class="text-xs">Turn 2+: 25%</span>)
-      A3(${stab.effect}<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n45%</span>)
-      B3(${scrape.effect}<img src=${scrape.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: ${aLevel.v >= 17 ? 1 : 2}\n55%</span>)
+      A3(${stab.effect}<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n45%</span>)
+      B3(${scrape.effect}<img src=${scrape.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: ${aLevel.v >= 17 ? 1 : 2}\n55%</span>)
       A==>B
       C==>Used
       subgraph Used [Entangle Used]

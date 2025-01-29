@@ -25,7 +25,7 @@ const snecko: Enemy = $derived({
     flowchart-elk TB
       A(${perplexingGlare.effect}<img src=${perplexingGlare.intent} class="h-10 object-contain" /><span class="text-xs">Turn 1: 100%\n0%</span>)
       B(${tailWhip.effect}<img src=${tailWhip.intent} class="h-10 object-contain" /><span class="text-xs">40%</span>)
-      C(${bite.effect}<img src=${bite.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n60%</span>)
+      C(${bite.effect}<img src=${bite.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n60%</span>)
   `,
   img: `${base}/assets/act2/monsters/snecko.webp`,
   name: "Snecko",

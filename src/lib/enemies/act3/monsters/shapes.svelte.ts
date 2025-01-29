@@ -45,7 +45,7 @@ const shapes: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
       subgraph Spiker [<img src=${base}/assets/act3/monsters/spiker.webp class="h-10 object-contain inline" />]
-        A(${cut.effect}<img src=${cut.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n40%</span>)
+        A(${cut.effect}<img src=${cut.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n40%</span>)
         B(${spike.effect}<img src=${spike.intent} class="h-10 object-contain" /><span class="text-xs">Max Uses: 6\n50%</span>)
       end
       subgraph Exploder [<img src=${base}/assets/act3/monsters/exploder.webp class="h-10 object-contain inline" />]
@@ -55,7 +55,7 @@ const shapes: Enemy = $derived({
         A2==>A3==>B2
       end
       subgraph Repulsor [<img src=${base}/assets/act3/monsters/repulsor.webp class="h-10 object-contain inline" />]
-        A4(${bash.effect}<img src=${bash.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n20%</span>)
+        A4(${bash.effect}<img src=${bash.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n20%</span>)
         B3(${repulse.effect}<img src=${repulse.intent} class="h-10 object-contain" /><span class="text-xs">80%</span>)
       end
   `,

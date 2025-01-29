@@ -17,8 +17,8 @@ const rake: Move = $derived({
 const blueSlaver: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
-      A(${stab.effect}<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n60%</span>)
-      B(${rake.effect}<img src=${rake.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: ${aLevel.v >= 17 ? 1 : 2}\n40%</span>)
+      A(${stab.effect}<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n60%</span>)
+      B(${rake.effect}<img src=${rake.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: ${aLevel.v >= 17 ? 1 : 2}\n40%</span>)
   `,
   img: `${base}/assets/act1/monsters/blue-slaver.webp`,
   name: "Blue Slaver",

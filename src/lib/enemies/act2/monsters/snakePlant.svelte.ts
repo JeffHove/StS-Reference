@@ -17,8 +17,8 @@ const enfeeblingSpores: Move = {
 const snakePlant: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
-      A(${chomp.effect}<img src=${chomp.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n65%</span>)
-      B(${enfeeblingSpores.effect}<img src=${enfeeblingSpores.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n35%</span>)
+      A(${chomp.effect}<img src=${chomp.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n65%</span>)
+      B(${enfeeblingSpores.effect}<img src=${enfeeblingSpores.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n35%</span>)
   `,
   img: `${base}/assets/act2/monsters/snake-plant.webp`,
   name: "Snake Plant",
