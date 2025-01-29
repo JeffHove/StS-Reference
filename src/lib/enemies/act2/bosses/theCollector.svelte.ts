@@ -40,18 +40,26 @@ const theCollector: Enemy = $derived({
         E(${tackle.effect}<img src=${tackle.intent} class="h-10 object-contain" />)
       end
       subgraph Collector [<img src=${base}/assets/act2/bosses/the-collector.webp class="h-10 object-contain inline" />]
-        A(${buff.effect}<img src=${buff.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n30%</span>)
-        subgraph 0-1Torch [0-1 Torch Heads]
-          B0(${fireball.effect}<img src=${fireball.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n45%</span>)
-          D0(${spawn.effect}<img src=${spawn.intent} class="h-10 object-contain" /><span class="text-xs">25%</span>)
+      subgraph 0-1Torch [0-1 Torch Heads]
+          A(<img src=${buff.intent} class="h-10 object-contain" /><span class="text-xs">30%</span>)
+          B(<img src=${fireball.intent} class="h-10 object-contain" /><span class="text-xs">45%</span>)
+          D(<img src=${spawn.intent} class="h-10 object-contain" /><span class="text-xs">25%</span>)
         end
         subgraph 2Torch [2 Torch Heads]
-          B2(${fireball.effect}<img src=${fireball.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n70%</span>)
+          A2(<img src=${buff.intent} class="h-10 object-contain" /><span class="text-xs">30%</span>)
+          B2(<img src=${fireball.intent} class="h-10 object-contain" /><span class="text-xs">70%</span>)
         end
         subgraph Turn4 [Turn 4]
-          C(${megaDebuff.effect}<img src=${megaDebuff.intent} class="h-10 object-contain" />)
+          C(<img src=${megaDebuff.intent} class="h-10 object-contain" />)
         end
       end
+  `,
+  moves: `
+    flowchart-elk TB
+      A(${buff.effect}<img src=${buff.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1</span>)
+      B(${fireball.effect}<img src=${fireball.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2</span>)
+      C(${megaDebuff.effect}<img src=${megaDebuff.intent} class="h-10 object-contain" />)
+      D(${spawn.effect}<img src=${spawn.intent} class="h-10 object-contain" />)
   `,
   img: `${base}/assets/act2/bosses/the-collector.webp`,
   name: "The Collector",

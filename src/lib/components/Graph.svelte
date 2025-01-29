@@ -5,7 +5,7 @@
   // Needed for flowcharts w/ A==>A loops: https://github.com/mermaid-js/mermaid/issues/6049
   mermaid.registerLayoutLoaders(elkLayouts);
 
-  const { flowchart }: { flowchart: string } = $props();
+  const { flowchart, moves }: { flowchart: string, moves: string | undefined } = $props();
 
   mermaid.initialize({
     theme: "base",
@@ -25,3 +25,9 @@
 <pre class="mermaid flex flex-1 justify-center">
   {flowchart}
 </pre>
+
+{#if moves}
+  <pre class="mermaid flex justify-center">
+    {moves}
+  </pre>
+{/if}

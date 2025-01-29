@@ -7,5 +7,5 @@
 </script>
 
 {#key enemy.flowchart}
-  <Graph flowchart={enemy.flowchart} />
+  <Graph flowchart={enemy.flowchart} moves={enemy.moves} />
 {/key}

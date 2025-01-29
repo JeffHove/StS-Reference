@@ -3,6 +3,7 @@ export type Enemy = {
   img: string
   name: string
   slug: string
+  moves?: string | undefined
 };
 
 export type Move = {
