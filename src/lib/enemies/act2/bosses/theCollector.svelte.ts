@@ -1,0 +1,60 @@
+import { aLevel } from "$lib/shared.svelte";
+import { type Enemy, type Move } from "$lib/types";
+
+const buff: Move = $derived({
+  effect: `Group ${aLevel.v >= 4 ? (aLevel.v >= 19 ? 5 : 4) : 3} Strength. ${aLevel.v >= 4 ? (aLevel.v >= 19 ? 23 : 18) : 15} Block.`,
+  intent: "/assets/intents/defendBuff.png",
+  name: "Buff",
+});
+
+const fireball: Move = $derived({
+  effect: `${aLevel.v >= 4 ? 21 : 18} Damage.`,
+  intent: "/assets/intents/4.png",
+  name: "Fireball",
+});
+
+const megaDebuff: Move = $derived({
+  effect: `${aLevel.v >= 19 ? 5 : 3} Weak. ${aLevel.v >= 19 ? 5 : 3} Vulnerable. ${aLevel.v >= 19 ? 5 : 3} Frail.`,
+  intent: "/assets/intents/debuff2.png",
+  name: "Mega Debuff",
+});
+
+const spawn: Move = {
+  effect: "Spawns up to 2 Torch Heads.",
+  intent: "/assets/intents/unknown.png",
+  name: "Spawn",
+};
+
+// Torch Head
+const tackle: Move = {
+  effect: "7 Damage.",
+  intent: "/assets/intents/2.png",
+  name: "Tackle",
+};
+
+const theCollector: Enemy = $derived({
+  flowchart: `
+    flowchart-elk TB
+      subgraph Head [<img src=/assets/act2/bosses/torch-head.webp class="h-10 object-contain inline" />]
+        E(${tackle.effect}<img src=${tackle.intent} class="h-10 object-contain" />)
+      end
+      subgraph Collector [<img src=/assets/act2/bosses/the-collector.webp class="h-10 object-contain inline" />]
+        A(${buff.effect}<img src=${buff.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n30%</span>)
+        subgraph 0-1Torch [0-1 Torch Heads]
+          B0(${fireball.effect}<img src=${fireball.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n45%</span>)
+          D0(${spawn.effect}<img src=${spawn.intent} class="h-10 object-contain" /><span class="text-xs">25%</span>)
+        end
+        subgraph 2Torch [2 Torch Heads]
+          B2(${fireball.effect}<img src=${fireball.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 2\n70%</span>)
+        end
+        subgraph Turn4 [Turn 4]
+          C(${megaDebuff.effect}<img src=${megaDebuff.intent} class="h-10 object-contain" />)
+        end
+      end
+  `,
+  img: "/assets/act2/bosses/the-collector.webp",
+  name: "The Collector",
+  slug: "the-collector",
+});
+
+export const getTheCollector = () => theCollector;
