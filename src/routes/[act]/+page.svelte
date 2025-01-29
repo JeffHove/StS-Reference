@@ -27,6 +27,8 @@
   let monsters: Enemy[] = actData[act].monsters.map(m => m());
   let elites: Enemy[] = actData[act].elites.map(m => m());
   let bosses: Enemy[] = actData[act].bosses.map(m => m());
+
+  let key = 0;
 </script>
 
 {#snippet card(slug: string, img: string, name: string)}
@@ -37,22 +39,27 @@
   </a>
 {/snippet}
 
-<div class="flex flex-1 items-center justify-around">
-  {#each bosses as boss}
-    {@render card(boss.slug, boss.img, boss.name)}
-  {/each}
-</div>
-
-<div class="flex flex-1 items-center justify-around">
-  {#each elites as elite}
-    {@render card(elite.slug, elite.img, elite.name)}
-  {/each}
-</div>
-
-{#if monsters.length > 0}
-  <div class="flex flex-1 flex-wrap items-center justify-center">
-    {#each monsters as monster}
-      {@render card(monster.slug, monster.img, monster.name)}
+<!-- Key needed b/c these assets don't load on refresh in prod -->
+{#key key}
+  <div class="flex flex-1 items-center justify-around">
+    {#each bosses as boss}
+      {@render card(boss.slug, boss.img, boss.name)}
     {/each}
   </div>
-{/if}
+
+  <div class="flex flex-1 items-center justify-around">
+    {#each elites as elite}
+      {@render card(elite.slug, elite.img, elite.name)}
+    {/each}
+  </div>
+
+  {#if monsters.length > 0}
+    <div class="flex flex-1 flex-wrap items-center justify-center">
+      {#each monsters as monster}
+        {@render card(monster.slug, monster.img, monster.name)}
+      {/each}
+    </div>
+  {/if}
+{/key}
+
+<svelte:window onload={() => key++} />
