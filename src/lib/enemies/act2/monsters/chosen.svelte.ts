@@ -16,7 +16,7 @@ const zap: Move = $derived({
 
 const debilitate: Move = $derived({
   effect: `${aLevel.v >= 2 ? 12 : 10} Damage. 2 Vulnerable.`,
-  intent: `${base}/assets/intents/unknown.png`,
+  intent: `${base}/assets/intents/attackDebuff.png`,
   name: "Debilitate",
 });
 
@@ -51,7 +51,6 @@ const chosen: Enemy = $derived({
         B
       end
       EvenTurn<==>OddTurn
-
   `
     : `
     flowchart-elk LR
