@@ -1,7 +1,9 @@
-<script lang="ts"></script>
+<script lang="ts">
+  import { base } from "$app/paths";
+</script>
 
 {#snippet card(num: number)}
-  <a href="/act{num}">
+  <a href="{base}/act{num}">
     <div class="rounded border-1 border-secondary p-6 text-center">
       Act {num}
     </div>

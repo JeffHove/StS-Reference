@@ -14,6 +14,7 @@
     act4Elites,
   } from "$lib/enemies";
   import { type Enemy } from "$lib/types";
+  import { base } from "$app/paths";
 
   const actData = {
     act1: { bosses: act1Bosses, elites: act1Elites, monsters: act1Monsters },
@@ -29,7 +30,7 @@
 </script>
 
 {#snippet card(slug: string, img: string, name: string)}
-  <a href="/{act}/{slug}">
+  <a href="{base}/{act}/{slug}">
     <div class="h-24 w-24 rounded border-1 border-secondary p-2">
       <img src={img} alt={name} class="h-full w-full object-contain" />
     </div>

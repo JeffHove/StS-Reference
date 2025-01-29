@@ -1,6 +1,7 @@
 <script lang="ts">
   import Ascension from "$lib/components/Ascension.svelte";
   import GitHub from "$lib/components/GitHub.svelte";
+  import { base } from "$app/paths";
 
   import "../app.css";
   let { children } = $props();
@@ -8,7 +9,7 @@
 
 <header class="flex items-center px-2">
   <div class="flex flex-1 justify-start">
-    <a href="/">Home</a>
+    <a href="{base}/">Home</a>
   </div>
   <div class="flex flex-1 justify-center">
     <Ascension />
