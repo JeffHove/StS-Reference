@@ -1,27 +1,28 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const debilitate: Move = {
   effect: "2 Vulnerable. 2 Weak. 2 Frail. Dazed, Slimed, Wound, Burn and Void into draw.",
-  intent: "/assets/intents/debuff2.png",
+  intent: `${base}/assets/intents/debuff2.png`,
   name: "Debilitate",
 };
 
 const bloodShots: Move = $derived({
   effect: `2 x ${aLevel.v >= 4 ? 15 : 12} Damage.`,
-  intent: "/assets/intents/5.png",
+  intent: `${base}/assets/intents/5.png`,
   name: "Blood Shots",
 });
 
 const echo: Move = $derived({
   effect: `${aLevel.v >= 4 ? 45 : 40} Damage.`,
-  intent: "/assets/intents/7.png",
+  intent: `${base}/assets/intents/7.png`,
   name: "Echo",
 });
 
 const buff: Move = {
   effect: "Removes Strength Down. 2 Strength and additional buff.",
-  intent: "/assets/intents/buff1.png",
+  intent: `${base}/assets/intents/buff1.png`,
   name: "Buff",
 };
 
@@ -40,7 +41,7 @@ const corruptHeart: Enemy = $derived({
       C2==>B2==>D
       end
   `,
-  img: "/assets/act4/bosses/corrupt-heart.webp",
+  img: `${base}/assets/act4/bosses/corrupt-heart.webp`,
   name: "Corrupt Heart",
   slug: "corrupt-heart",
 });

@@ -1,33 +1,34 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const poke: Move = $derived({
   effect: `${aLevel.v >= 2 ? 6 : 5} x 2 Damage.`,
-  intent: "/assets/intents/3.png",
+  intent: `${base}/assets/intents/3.png`,
   name: "Poke",
 });
 
 const zap: Move = $derived({
   effect: `${aLevel.v >= 2 ? 21 : 18} Damage.`,
-  intent: "/assets/intents/4.png",
+  intent: `${base}/assets/intents/4.png`,
   name: "Zap",
 });
 
 const debilitate: Move = $derived({
   effect: `${aLevel.v >= 2 ? 12 : 10} Damage. 2 Vulnerable.`,
-  intent: "/assets/intents/unknown.png",
+  intent: `${base}/assets/intents/unknown.png`,
   name: "Debilitate",
 });
 
 const drain: Move = {
   effect: "3 Weak. 3 Strength.",
-  intent: "/assets/intents/debuff1.png",
+  intent: `${base}/assets/intents/debuff1.png`,
   name: "Drain",
 };
 
 const hex: Move = {
   effect: "1 Hex.",
-  intent: "/assets/intents/debuff2.png",
+  intent: `${base}/assets/intents/debuff2.png`,
   name: "Hex",
 };
 
@@ -71,7 +72,7 @@ const chosen: Enemy = $derived({
       end
       OddTurn<==>EvenTurn
   `,
-  img: "/assets/act2/monsters/chosen.webp",
+  img: `${base}/assets/act2/monsters/chosen.webp`,
   name: "Chosen",
   slug: "chosen",
 });

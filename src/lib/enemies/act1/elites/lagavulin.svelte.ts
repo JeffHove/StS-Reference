@@ -1,15 +1,16 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const attack: Move = $derived({
   effect: `${aLevel.v >= 3 ? 20 : 18} Damage.`,
-  intent: "/assets/intents/4.png",
+  intent: `${base}/assets/intents/4.png`,
   name: "Attack",
 });
 
 const siphonSoul: Move = $derived({
   effect: ` -${aLevel.v >= 18 ? 2 : 1} Dexterity. -${aLevel.v >= 18 ? 2 : 1} Strength.`,
-  intent: "/assets/intents/debuff2.png",
+  intent: `${base}/assets/intents/debuff2.png`,
   name: "Siphon Soul",
 });
 
@@ -23,7 +24,7 @@ const lagavulin: Enemy = $derived({
       A2==>B
       B==>A
   `,
-  img: "/assets/act1/elites/lagavulin.webp",
+  img: `${base}/assets/act1/elites/lagavulin.webp`,
   name: "Lagavulin",
   slug: "lagavulin",
 });

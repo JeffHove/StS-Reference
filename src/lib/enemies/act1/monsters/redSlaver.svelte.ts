@@ -1,21 +1,22 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const stab: Move = $derived({
   effect: `${aLevel.v >= 2 ? 14 : 13} Damage.`,
-  intent: "/assets/intents/3.png",
+  intent: `${base}/assets/intents/3.png`,
   name: "Stab",
 });
 
 const scrape: Move = $derived({
   effect: `${aLevel.v >= 2 ? 9 : 8} Damage. ${aLevel.v >= 17 ? 2 : 1} Vulnerable.`,
-  intent: "/assets/intents/attackDebuff.png",
+  intent: `${base}/assets/intents/attackDebuff.png`,
   name: "Scrape",
 });
 
 const entangle: Move = {
   effect: "1 Entangled.",
-  intent: "/assets/intents/debuff2.png",
+  intent: `${base}/assets/intents/debuff2.png`,
   name: "Entangle",
 };
 
@@ -63,7 +64,7 @@ const redSlaver: Enemy = $derived({
         A2==>B
       end
   `,
-  img: "/assets/act1/monsters/red-slaver.webp",
+  img: `${base}/assets/act1/monsters/red-slaver.webp`,
   name: "Red Slaver",
   slug: "red-slaver",
 });

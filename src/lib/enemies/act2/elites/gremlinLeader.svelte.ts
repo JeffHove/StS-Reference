@@ -1,21 +1,22 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const encourage: Move = $derived({
   effect: `Group ${aLevel.v >= 3 ? (aLevel.v >= 18 ? 5 : 4) : 3} Strength. Group ${aLevel.v >= 18 ? 10 : 6} Block.`,
-  intent: "/assets/intents/defendBuff.png",
+  intent: `${base}/assets/intents/defendBuff.png`,
   name: "Encourage",
 });
 
 const rally: Move = {
   effect: "Spawns 2 Gremlins.",
-  intent: "/assets/intents/unknown.png",
+  intent: `${base}/assets/intents/unknown.png`,
   name: "Rally!",
 };
 
 const stab: Move = {
   effect: "6 x 3 Damage.",
-  intent: "/assets/intents/4.png",
+  intent: `${base}/assets/intents/4.png`,
   name: "Stab",
 };
 
@@ -60,7 +61,7 @@ const gremlinLeader: Enemy = $derived({
         C2
       end
   `,
-  img: "/assets/act2/elites/gremlin-leader.webp",
+  img: `${base}/assets/act2/elites/gremlin-leader.webp`,
   name: "Gremlin Leader",
   slug: "gremlin-leader",
 });

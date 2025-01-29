@@ -1,33 +1,34 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const nip: Move = $derived({
   effect: `${aLevel.v >= 2 ? "D + 2" : "D"} Damage. D is chosen between 7 and 11 at the beginning of the battle.`,
-  intent: "/assets/intents/2.png",
+  intent: `${base}/assets/intents/2.png`,
   name: "Nip",
 });
 
 const chomp: Move = $derived({
   effect: `${aLevel.v >= 2 ? 9 : 8} x 2 Damage.`,
-  intent: "/assets/intents/4.png",
+  intent: `${base}/assets/intents/4.png`,
   name: "Chomp",
 });
 
 const harden: Move = $derived({
   effect: `12 Block.${aLevel.v >= 17 ? " 2 Strength." : ""}`,
-  intent: `/assets/intents/${aLevel.v >= 17 ? "defendBuff" : "defend"}.png`,
+  intent: `${base}/assets/intents/${aLevel.v >= 17 ? "defendBuff" : "defend"}.png`,
   name: "Harden",
 });
 
 const reincarnate: Move = {
   effect: "Revives with 50% HP.",
-  intent: "/assets/intents/buff1.png",
+  intent: `${base}/assets/intents/buff1.png`,
   name: "Reincarnate",
 };
 
 const regrow: Move = {
   effect: "Nothing.",
-  intent: "/assets/intents/unknown.png",
+  intent: `${base}/assets/intents/unknown.png`,
   name: "Regrow",
 };
 
@@ -54,7 +55,7 @@ const darkling: Enemy = $derived({
       Middle~~~Moves
       Outer~~~Moves
   `,
-  img: "/assets/act3/monsters/darkling.webp",
+  img: `${base}/assets/act3/monsters/darkling.webp`,
   name: "Darkling",
   slug: "darkling",
 });

@@ -1,15 +1,16 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const incantation: Move = $derived({
   effect: `${aLevel.v >= 2 ? (aLevel.v >= 17 ? 5 : 4) : 3} Ritual.`,
-  intent: "/assets/intents/buff1.png",
+  intent: `${base}/assets/intents/buff1.png`,
   name: "Incantation",
 });
 
 const darkStrike: Move = {
   effect: "6 Damage.",
-  intent: "/assets/intents/2.png",
+  intent: `${base}/assets/intents/2.png`,
   name: "Dark Strike",
 };
 
@@ -21,7 +22,7 @@ const cultist: Enemy = $derived({
       A==>B
       B==>B
   `,
-  img: "/assets/act1/monsters/cultist.webp",
+  img: `${base}/assets/act1/monsters/cultist.webp`,
   name: "Cultist",
   slug: "cultist",
 });

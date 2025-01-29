@@ -1,33 +1,34 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const implant: Move = {
   effect: "1 Parasite into deck. Only affects future combats.",
-  intent: "/assets/intents/debuff2.png",
+  intent: `${base}/assets/intents/debuff2.png`,
   name: "Implant",
 };
 
 const flail: Move = $derived({
   effect: `${aLevel.v >= 2 ? 16 : 15} Damage. ${aLevel.v >= 2 ? 18 : 16} Block.`,
-  intent: "/assets/intents/attackDefend.png",
+  intent: `${base}/assets/intents/attackDefend.png`,
   name: "Flail",
 });
 
 const wither: Move = $derived({
   effect: `${aLevel.v >= 2 ? 12 : 10} Damage. 2 Weak. 2 Vulnerable.`,
-  intent: "/assets/intents/attackDebuff.png",
+  intent: `${base}/assets/intents/attackDebuff.png`,
   name: "Wither",
 });
 
 const multiStrike: Move = $derived({
   effect: `${aLevel.v >= 2 ? 9 : 7} x 3 Damage.`,
-  intent: "/assets/intents/5.png",
+  intent: `${base}/assets/intents/5.png`,
   name: "Multi-Strike",
 });
 
 const strongStrike: Move = $derived({
   effect: `${aLevel.v >= 2 ? 38 : 32} Damage.`,
-  intent: "/assets/intents/7.png",
+  intent: `${base}/assets/intents/7.png`,
   name: "Strong Strike",
 });
 
@@ -48,7 +49,7 @@ const writhingMass: Enemy = $derived({
         E2(${strongStrike.effect}<img src=${strongStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max Consecutive: 1\n10%</span>)
       end
   `,
-  img: "/assets/act3/monsters/writhing-mass.webp",
+  img: `${base}/assets/act3/monsters/writhing-mass.webp`,
   name: "Writhing Mass",
   slug: "writhing-mass",
 });

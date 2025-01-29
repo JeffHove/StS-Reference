@@ -1,27 +1,28 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const goopSpray: Move = $derived({
   effect: `${aLevel.v >= 19 ? 5 : 3} Slimed into discard.`,
-  intent: "/assets/intents/debuff2.png",
+  intent: `${base}/assets/intents/debuff2.png`,
   name: "Goop Spray",
 });
 
 const preparing: Move = {
   effect: "Nothing.",
-  intent: "/assets/intents/unknown.png",
+  intent: `${base}/assets/intents/unknown.png`,
   name: "Preparing",
 };
 
 const slam: Move = $derived({
   effect: `${aLevel.v >= 4 ? 38 : 35} Damage.`,
-  intent: "/assets/intents/7.png",
+  intent: `${base}/assets/intents/7.png`,
   name: "Slam",
 });
 
 const split: Move = {
   effect: "Spawns Acid Slime L and Spike Slime L with current HP. Dies.",
-  intent: "/assets/intents/unknown.png",
+  intent: `${base}/assets/intents/unknown.png`,
   name: "Split",
 };
 
@@ -36,7 +37,7 @@ const slimeBoss: Enemy = $derived({
     B==>C
     C==>A
   `,
-  img: "/assets/act1/bosses/slime-boss.webp",
+  img: `${base}/assets/act1/bosses/slime-boss.webp`,
   name: "Slime Boss",
   slug: "slime-boss",
 });

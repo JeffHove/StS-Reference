@@ -1,27 +1,28 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const roar: Move = $derived({
   effect: `${aLevel.v >= 17 ? 5 : 3} Weak. ${aLevel.v >= 17 ? 5 : 3} Frail.`,
-  intent: "/assets/intents/debuff2.png",
+  intent: `${base}/assets/intents/debuff2.png`,
   name: "Roar",
 });
 
 const drool: Move = $derived({
   effect: `${aLevel.v >= 17 ? 5 : 3} Strength.`,
-  intent: "/assets/intents/buff1.png",
+  intent: `${base}/assets/intents/buff1.png`,
   name: "Drool",
 });
 
 const slam: Move = $derived({
   effect: `${aLevel.v >= 2 ? 30 : 25} Damage.`,
-  intent: "/assets/intents/6.png",
+  intent: `${base}/assets/intents/6.png`,
   name: "Slam",
 });
 
 const nom: Move = {
   effect: "5 x T Damage. T = Turn Number / 2, rounded up.",
-  intent: "/assets/intents/2.png",
+  intent: `${base}/assets/intents/2.png`,
   name: "Nom",
 };
 
@@ -43,7 +44,7 @@ const theMaw: Enemy = $derived({
       D==>B
       C==>afterSlam
   `,
-  img: "/assets/act3/monsters/the-maw.webp",
+  img: `${base}/assets/act3/monsters/the-maw.webp`,
   name: "The Maw",
   slug: "the-maw",
 });

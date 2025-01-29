@@ -1,27 +1,28 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const slam: Move = $derived({
   effect: `${aLevel.v >= 2 ? 11 : 10} x 2 Damage.`,
-  intent: "/assets/intents/5.png",
+  intent: `${base}/assets/intents/5.png`,
   name: "Slam",
 });
 
 const activate: Move = $derived({
   effect: `${aLevel.v >= 17 ? 35 : 25} Block.`,
-  intent: "/assets/intents/defend.png",
+  intent: `${base}/assets/intents/defend.png`,
   name: "Activate",
 });
 
 const harden: Move = $derived({
   effect: `${aLevel.v >= 2 ? 11 : 10} Damage. 15 Block.`,
-  intent: "/assets/intents/attackDefend.png",
+  intent: `${base}/assets/intents/attackDefend.png`,
   name: "Harden",
 });
 
 const attackDebuff: Move = $derived({
   effect: `${aLevel.v >= 2 ? 11 : 10} Damage. 5 Frail.`,
-  intent: "/assets/intents/attackDebuff.png",
+  intent: `${base}/assets/intents/attackDebuff.png`,
   name: "Attack/Debuff",
 });
 
@@ -34,7 +35,7 @@ const sphericGuardian: Enemy = $derived({
       D(${attackDebuff.effect}<img src=${attackDebuff.intent} class="h-10 object-contain" />)
       B==>D==>A<==>C
   `,
-  img: "/assets/act2/monsters/spheric-guardian.webp",
+  img: `${base}/assets/act2/monsters/spheric-guardian.webp`,
   name: "Spheric Guardian",
   slug: "spheric-guardian",
 });

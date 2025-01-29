@@ -1,21 +1,22 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const bellow: Move = $derived({
   effect: `${aLevel.v >= 18 ? 3 : 2} Enrage.`,
-  intent: "/assets/intents/buff1.png",
+  intent: `${base}/assets/intents/buff1.png`,
   name: "Bellow",
 });
 
 const rush: Move = $derived({
   effect: `${aLevel.v >= 3 ? 16 : 14} Damage.`,
-  intent: "/assets/intents/3.png",
+  intent: `${base}/assets/intents/3.png`,
   name: "Rush",
 });
 
 const skullBash: Move = $derived({
   effect: `${aLevel.v >= 3 ? 8 : 6} Damage. 2 Vulnerable.`,
-  intent: "/assets/intents/attackDebuff.png",
+  intent: `${base}/assets/intents/attackDebuff.png`,
   name: "Skull Bash",
 });
 
@@ -44,7 +45,7 @@ const gremlinNob: Enemy = $derived({
         C
       end
   `,
-  img: "/assets/act1/elites/gremlin-nob.webp",
+  img: `${base}/assets/act1/elites/gremlin-nob.webp`,
   name: "Gremlin Nob",
   slug: "gremlin-nob",
 });

@@ -1,45 +1,46 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const defensiveStance: Move = $derived({
   effect: `${aLevel.v >= 9 ? (aLevel.v >= 19 ? 20 : 18) : 15} Block. ${aLevel.v >= 9 ? (aLevel.v >= 19 ? 7 : 6) : 5} Metallicize.`,
-  intent: "/assets/intents/defendBuff.png",
+  intent: `${base}/assets/intents/defendBuff.png`,
   name: "Defensive Stance",
 });
 
 const faceSlap: Move = $derived({
   effect: `${aLevel.v >= 4 ? 14 : 12} Damage. 2 Frail. 2 Vulnerable.`,
-  intent: "/assets/intents/attackDebuff.png",
+  intent: `${base}/assets/intents/attackDebuff.png`,
   name: "Face Slap",
 });
 
 const taunt: Move = {
   effect: "2 Weak. 2 Vulnerable.",
-  intent: "/assets/intents/debuff1.png",
+  intent: `${base}/assets/intents/debuff1.png`,
   name: "Taunt",
 };
 
 const heavySlash: Move = $derived({
   effect: `${aLevel.v >= 4 ? 18 : 16} Damage.`,
-  intent: "/assets/intents/4.png",
+  intent: `${base}/assets/intents/4.png`,
   name: "Heavy Slash",
 });
 
 const gloat: Move = $derived({
   effect: `${aLevel.v >= 4 ? (aLevel.v >= 19 ? 4 : 3) : 2} Strength.`,
-  intent: "/assets/intents/buff1.png",
+  intent: `${base}/assets/intents/buff1.png`,
   name: "Gloat",
 });
 
 const execute: Move = {
   effect: "10 x 2 Damage.",
-  intent: "/assets/intents/5.png",
+  intent: `${base}/assets/intents/5.png`,
   name: "Execute",
 };
 
 const anger: Move = $derived({
   effect: `Removes debuffs. ${aLevel.v >= 4 ? (aLevel.v >= 19 ? 12 : 9) : 6} Strength.`,
-  intent: "/assets/intents/buff1.png",
+  intent: `${base}/assets/intents/buff1.png`,
   name: "Anger",
 });
 
@@ -88,7 +89,7 @@ const theChamp: Enemy = $derived({
         G==>F==>M1(Main)==>M2(Main)==>F
       end
   `,
-  img: "/assets/act2/bosses/the-champ.webp",
+  img: `${base}/assets/act2/bosses/the-champ.webp`,
   name: "The Champ",
   slug: "the-champ",
 });

@@ -1,47 +1,48 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 // Offensive
 const chargingUp: Move = {
   effect: "9 Block",
-  intent: "/assets/intents/defend.png",
+  intent: `${base}/assets/intents/defend.png`,
   name: "Charging Up",
 };
 
 const fierceBash: Move = $derived({
   effect: `${aLevel.v >= 4 ? 36 : 32} Damage.`,
-  intent: "/assets/intents/7.png",
+  intent: `${base}/assets/intents/7.png`,
   name: "Fierce Bash",
 });
 
 const ventSteam: Move = {
   effect: "2 Weak. 2 Vulnerable",
-  intent: "/assets/intents/debuff2.png",
+  intent: `${base}/assets/intents/debuff2.png`,
   name: "Charging Up",
 };
 
 const whirlwind: Move = {
   effect: "5 x 4 Damage.",
-  intent: "/assets/intents/5.png",
+  intent: `${base}/assets/intents/5.png`,
   name: "Whirlwind",
 };
 
 // Defensive
 const defensiveMode: Move = $derived({
   effect: `${aLevel.v >= 19 ? 4 : 3} Sharp Hide.`,
-  intent: "/assets/intents/buff1.png",
+  intent: `${base}/assets/intents/buff1.png`,
   name: "Defensive Mode",
 });
 
 const rollAttack: Move = $derived({
   effect: `${aLevel.v >= 4 ? 10 : 9} Damage.`,
-  intent: "/assets/intents/3.png",
+  intent: `${base}/assets/intents/3.png`,
   name: "Roll Attack",
 });
 
 const twinSlam: Move = {
   effect: "8 x 2 Damage. Removes Sharp Hide. Enters Offensive mode.",
-  intent: "/assets/intents/attackBuff.png",
+  intent: `${base}/assets/intents/attackBuff.png`,
   name: "Twin Slam",
 };
 
@@ -55,16 +56,16 @@ const theGuardian: Enemy = $derived({
       E(${defensiveMode.effect}<img src=${defensiveMode.intent} class="h-10 object-contain" /><span class="text-xs">Start</span>)
       F(${rollAttack.effect}<img src=${rollAttack.intent} class="h-10 object-contain" />)
       G(${twinSlam.effect}<img src=${twinSlam.intent} class="h-10 object-contain" />)
-      subgraph Offensive [<img src=/assets/act1/bosses/the-guardian-offensive.webp class="h-10 object-contain inline" />]
+      subgraph Offensive [<img src=${base}/assets/act1/bosses/the-guardian-offensive.webp class="h-10 object-contain inline" />]
         direction LR
         A==>B==>C==>D==>A
       end
-      subgraph Defensive [<img src=/assets/act1/bosses/the-guardian-defensive.webp class="h-10 object-contain inline" />]
+      subgraph Defensive [<img src=${base}/assets/act1/bosses/the-guardian-defensive.webp class="h-10 object-contain inline" />]
         direction LR
         E==>F==>G==>E
       end 
   `,
-  img: "/assets/act1/bosses/the-guardian-offensive.webp",
+  img: `${base}/assets/act1/bosses/the-guardian-offensive.webp`,
   name: "The Guardian",
   slug: "the-guardian",
 });

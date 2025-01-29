@@ -1,21 +1,22 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const count: Move = {
   effect: "13 Damage.",
-  intent: "/assets/intents/3.png",
+  intent: `${base}/assets/intents/3.png`,
   name: "Count",
 };
 
 const glare: Move = {
   effect: "1 Weak.",
-  intent: "/assets/intents/debuff1.png",
+  intent: `${base}/assets/intents/debuff1.png`,
   name: "Glare",
 };
 
 const itIsTime: Move = $derived({
   effect: `${aLevel.v >= 3 ? 40 : 30} + T Damage. T starts at 0 and increases by 5 every time the attack is used, up to 30 additional Damage.`,
-  intent: "/assets/intents/7.png",
+  intent: `${base}/assets/intents/7.png`,
   name: "It Is Time",
 });
 
@@ -30,7 +31,7 @@ const giantHead: Enemy = $derived({
         C(${itIsTime.effect}<img src=${itIsTime.intent} class="h-10 object-contain" />)
       end
   `,
-  img: "/assets/act3/elites/giant-head.webp",
+  img: `${base}/assets/act3/elites/giant-head.webp`,
   name: "Giant Head",
   slug: "giant-head",
 });

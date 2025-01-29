@@ -1,21 +1,22 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const debuff: Move = $derived({
   effect: `${aLevel.v >= 18 ? 5 : 3} Burn into discard.`,
-  intent: "/assets/intents/debuff1.png",
+  intent: `${base}/assets/intents/debuff1.png`,
   name: "Debuff",
 });
 
 const attack: Move = $derived({
   effect: `${aLevel.v >= 3 ? 7 : 6} x 3 Damage.`,
-  intent: "/assets/intents/4.png",
+  intent: `${base}/assets/intents/4.png`,
   name: "Attack",
 });
 
 const scythe: Move = {
   effect: "45 Damage.",
-  intent: "/assets/intents/7.png",
+  intent: `${base}/assets/intents/7.png`,
   name: "Scythe",
 };
 
@@ -39,7 +40,7 @@ const nemesis: Enemy = $derived({
       Turn1~~~Moves
       Turn+~~~Moves
   `,
-  img: "/assets/act3/elites/nemesis.webp",
+  img: `${base}/assets/act3/elites/nemesis.webp`,
   name: "Nemesis",
   slug: "nemesis",
 });

@@ -1,39 +1,40 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const activate: Move = {
   effect: "Nothing.",
-  intent: "/assets/intents/unknown.png",
+  intent: `${base}/assets/intents/unknown.png`,
   name: "Activate",
 };
 
 const divider: Move = {
   effect: "H x 6 Damage. H = Player HP / 12 + 1, rounded down.",
-  intent: "/assets/intents/7.png",
+  intent: `${base}/assets/intents/7.png`,
   name: "Divider",
 };
 
 const inferno: Move = $derived({
   effect: `${aLevel.v >= 4 ? 3 : 2} x 6 Damage. Upgrades all Burn. 3 Burn+ into discard.`,
-  intent: "/assets/intents/3.png",
+  intent: `${base}/assets/intents/3.png`,
   name: "Inferno",
 });
 
 const sear: Move = $derived({
   effect: `6 Damage. ${aLevel.v >= 19 ? 2 : 1} Burn into discard.`,
-  intent: "/assets/intents/attackDebuff.png",
+  intent: `${base}/assets/intents/attackDebuff.png`,
   name: "Sear",
 });
 
 const tackle: Move = $derived({
   effect: `${aLevel.v >= 4 ? 6 : 5} x 2 Damage.`,
-  intent: "/assets/intents/3.png",
+  intent: `${base}/assets/intents/3.png`,
   name: "Tackle",
 });
 
 const inflame: Move = $derived({
   effect: `${aLevel.v >= 19 ? 3 : 2} Strength. 12 Block.`,
-  intent: "/assets/intents/defendBuff.png",
+  intent: `${base}/assets/intents/defendBuff.png`,
   name: "Inflame",
 });
 
@@ -59,7 +60,7 @@ const hexaghost: Enemy = $derived({
       C3==>F
       F== Gives Burn+ instead of Burn ==>B
   `,
-  img: "/assets/act1/bosses/hexaghost.webp",
+  img: `${base}/assets/act1/bosses/hexaghost.webp`,
   name: "Hexaghost",
   slug: "hexaghost",
 });

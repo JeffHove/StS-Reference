@@ -1,21 +1,22 @@
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
+import { base } from "$app/paths";
 
 const quickTackle: Move = $derived({
   effect: `${aLevel.v >= 2 ? 18 : 16} Damage.`,
-  intent: "/assets/intents/4.png",
+  intent: `${base}/assets/intents/4.png`,
   name: "Quick Tackle",
 });
 
 const smash: Move = $derived({
   effect: `${aLevel.v >= 2 ? 25 : 22} Damage.`,
-  intent: "/assets/intents/5.png",
+  intent: `${base}/assets/intents/5.png`,
   name: "Smash",
 });
 
 const constrict: Move = $derived({
   effect: `${aLevel.v >= 17 ? 12 : 10} Constricted.`,
-  intent: "/assets/intents/debuff2.png",
+  intent: `${base}/assets/intents/debuff2.png`,
   name: "Constrict",
 });
 
@@ -44,7 +45,7 @@ const spireGrowth: Enemy = $derived({
       end
       C==>isC
   `,
-  img: "/assets/act3/monsters/spire-growth.webp",
+  img: `${base}/assets/act3/monsters/spire-growth.webp`,
   name: "Spire Growth",
   slug: "spire-growth",
 });
