@@ -41,7 +41,7 @@ const beam: Move = {
 };
 
 const supportBeam: Move = {
-  effect: "Bronze Automaton 12 Block.",
+  effect: `<img src=${base}/assets/act2/bosses/bronze-automaton.webp class='h-10 object-contain inline' /> 12 Block.`,
   intent: `${base}/assets/intents/defend.png`,
   name: "Support Beam",
 };
