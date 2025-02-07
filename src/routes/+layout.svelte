@@ -7,6 +7,10 @@
   let { children } = $props();
 </script>
 
+<svelte:head>
+  <title>StS Reference</title>
+</svelte:head>
+
 <header class="flex items-center px-2">
   <div class="flex flex-1 justify-start">
     <a href="{base}/">Home</a>
