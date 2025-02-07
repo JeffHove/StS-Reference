@@ -24,25 +24,20 @@ const gremlinNob: Enemy = $derived({
   flowchart: aLevel.v >= 18
     ? `
     flowchart-elk LR
+      C(${skullBash.effect}<img src=${skullBash.intent} class="h-10 object-contain" />)
       A(${bellow.effect}<img src=${bellow.intent} class="h-10 object-contain" />)
       B(${rush.effect}<img src=${rush.intent} class="h-10 object-contain" />)
       B2(${rush.effect}<img src=${rush.intent} class="h-10 object-contain" />)
-      C(${skullBash.effect}<img src=${skullBash.intent} class="h-10 object-contain" />)
-    A==>C
-    C==>B
-    B==>B2
-    B2==>A
+      A==>C==>B==>B2==>C
   `
     : `
     flowchart-elk LR
       A(${bellow.effect}<img src=${bellow.intent} class="h-10 object-contain" />)
-      B(${rush.effect}<img src=${rush.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n67%</span>)
-      C(${skullBash.effect}<img src=${skullBash.intent} class="h-10 object-contain" /><span class="text-xs">33%</span>)
       A==>Turn2+
       subgraph Turn2+ [Turn 2+]
         direction LR
-        B
-        C
+        B(${rush.effect}<img src=${rush.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n67%</span>)
+        C(${skullBash.effect}<img src=${skullBash.intent} class="h-10 object-contain" /><span class="text-xs">33%</span>)
       end
   `,
   img: `${base}/assets/act1/elites/gremlin-nob.webp`,
