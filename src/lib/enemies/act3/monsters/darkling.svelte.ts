@@ -34,26 +34,28 @@ const regrow: Move = {
 
 const darkling: Enemy = $derived({
   flowchart: `
-    flowchart-elk TB
+    flowchart-elk LR
       D(${reincarnate.effect}<img src=${reincarnate.intent} class="h-10 object-contain" />)
       E(${regrow.effect}<img src=${regrow.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: 0 HP.</span>)
       E==>D
-      subgraph Middle [Middle Darkling / Outer Darklings Turn 1]
+      subgraph Middle [Middle Darkling and Outer Darklings Turn 1]
+        direction LR
         A1(<img src=${nip.intent} class="h-10 object-contain" /><span class="text-xs">50%</span>)
         C1(<img src=${harden.intent} class="h-10 object-contain" /><span class="text-xs">50%</span>)
       end
       subgraph Outer [Outer Darklings Turn 2+]
+        direction LR
         A2(<img src=${nip.intent} class="h-10 object-contain" /><span class="text-xs">30%</span>)
         B2(<img src=${chomp.intent} class="h-10 object-contain" /><span class="text-xs">40%</span>)
         C2(<img src=${harden.intent} class="h-10 object-contain" /><span class="text-xs">30%</span>)
       end
-      subgraph Moves
-        A(${nip.effect}<img src=${nip.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2</span>)
-        B(${chomp.effect}<img src=${chomp.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
-        C(${harden.effect}<img src=${harden.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
-      end
-      Middle~~~Moves
-      Outer~~~Moves
+      Middle~~~Outer~~~E
+  `,
+  moves: `
+    flowchart-elk TB
+      A(${nip.effect}<img src=${nip.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2</span>)
+      B(${chomp.effect}<img src=${chomp.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
+      C(${harden.effect}<img src=${harden.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)  
   `,
   img: `${base}/assets/act3/monsters/darkling.webp`,
   name: "Darkling",

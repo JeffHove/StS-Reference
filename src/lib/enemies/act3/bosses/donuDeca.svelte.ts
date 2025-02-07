@@ -39,7 +39,7 @@ const donuDeca: Enemy = $derived({
       subgraph Deca [<img src=${base}/assets/act3/bosses/deca.webp class="h-10 object-contain inline" />]
         A2(${squareOfProtection.effect}<img src=${squareOfProtection.intent} class="h-10 object-contain" />)
         B2(${beamDeca.effect}<img src=${beamDeca.intent} class="h-10 object-contain" /><span class="text-xs">Start</span>)
-        A2<==>B2
+        B2<==>A2
       end
   `,
   img: `${base}/assets/act3/bosses/donu-deca.webp`,

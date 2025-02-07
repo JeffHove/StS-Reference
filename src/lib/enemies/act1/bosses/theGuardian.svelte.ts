@@ -49,21 +49,19 @@ const twinSlam: Move = {
 const theGuardian: Enemy = $derived({
   flowchart: `
     flowchart-elk LR
-      A(${chargingUp.effect}<img src=${chargingUp.intent} class="h-10 object-contain" /><span class="text-xs">Start</span>)
-      B(${fierceBash.effect}<img src=${fierceBash.intent} class="h-10 object-contain" />)
-      C(${ventSteam.effect}<img src=${ventSteam.intent} class="h-10 object-contain" />)
-      D(${whirlwind.effect}<img src=${whirlwind.intent} class="h-10 object-contain" />)
-      E(${defensiveMode.effect}<img src=${defensiveMode.intent} class="h-10 object-contain" /><span class="text-xs">Start</span>)
-      F(${rollAttack.effect}<img src=${rollAttack.intent} class="h-10 object-contain" />)
-      G(${twinSlam.effect}<img src=${twinSlam.intent} class="h-10 object-contain" />)
-      subgraph Offensive [<img src=${base}/assets/act1/bosses/the-guardian-offensive.webp class="h-10 object-contain inline" />]
-        direction LR
-        A==>B==>C==>D==>A
-      end
       subgraph Defensive [<img src=${base}/assets/act1/bosses/the-guardian-defensive.webp class="h-10 object-contain inline" />]
-        direction LR
+        E(${defensiveMode.effect}<img src=${defensiveMode.intent} class="h-10 object-contain" /><span class="text-xs">Start</span>)
+        F(${rollAttack.effect}<img src=${rollAttack.intent} class="h-10 object-contain" />)
+        G(${twinSlam.effect}<img src=${twinSlam.intent} class="h-10 object-contain" />)
         E==>F==>G==>E
       end 
+      subgraph Offensive [<img src=${base}/assets/act1/bosses/the-guardian-offensive.webp class="h-10 object-contain inline" />]
+        B(${fierceBash.effect}<img src=${fierceBash.intent} class="h-10 object-contain" />)
+        C(${ventSteam.effect}<img src=${ventSteam.intent} class="h-10 object-contain" />)
+        A(${chargingUp.effect}<img src=${chargingUp.intent} class="h-10 object-contain" /><span class="text-xs">Start</span>)
+        D(${whirlwind.effect}<img src=${whirlwind.intent} class="h-10 object-contain" />)
+        A==>B==>C==>D==>A
+      end
   `,
   img: `${base}/assets/act1/bosses/the-guardian-offensive.webp`,
   name: "The Guardian",

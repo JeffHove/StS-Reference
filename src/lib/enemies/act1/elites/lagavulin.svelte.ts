@@ -16,13 +16,11 @@ const siphonSoul: Move = $derived({
 
 const lagavulin: Enemy = $derived({
   flowchart: `
-    flowchart-elk TB
-      A(${attack.effect}<img src=${attack.intent} class="h-10 object-contain" />)
+    flowchart-elk LR
+      A(${attack.effect}<img src=${attack.intent} class="h-10 object-contain" /><span class="text-xs">Start</span>)
       A2(${attack.effect}<img src=${attack.intent} class="h-10 object-contain" />)
       B(${siphonSoul.effect}<img src=${siphonSoul.intent} class="h-10 object-contain" />)
-      A==>A2
-      A2==>B
-      B==>A
+      A==>A2==>B==>A
   `,
   img: `${base}/assets/act1/elites/lagavulin.webp`,
   name: "Lagavulin",

@@ -37,14 +37,14 @@ const reptomancer: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
       subgraph Reptomancer [<img src=${base}/assets/act3/elites/reptomancer.webp class="h-10 object-contain inline" />]
+        subgraph 4Daggers [4 Daggers]
+          B3(<img src=${snakeStrike.intent} class="h-10 object-contain" /><span class="text-xs">67%</span>)
+          C3(<img src=${bigBite.intent} class="h-10 object-contain" /><span class="text-xs">33%</span>)
+        end
         subgraph 0-3Daggers [0-3 Daggers]
           A2(<img src=${summon.intent} class="h-10 object-contain" /><span class="text-xs">33%</span>)
           B2(<img src=${snakeStrike.intent} class="h-10 object-contain" /><span class="text-xs">33%</span>)
           C2(<img src=${bigBite.intent} class="h-10 object-contain" /><span class="text-xs">33%</span>)
-        end
-        subgraph 4Daggers [4 Daggers]
-          B3(<img src=${snakeStrike.intent} class="h-10 object-contain" /><span class="text-xs">67%</span>)
-          C3(<img src=${bigBite.intent} class="h-10 object-contain" /><span class="text-xs">33%</span>)
         end
       end
       subgraph Dagger [<img src=${base}/assets/act3/elites/dagger.webp class="h-10 object-contain inline" />]

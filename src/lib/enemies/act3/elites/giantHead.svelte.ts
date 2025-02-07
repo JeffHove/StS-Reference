@@ -23,12 +23,12 @@ const itIsTime: Move = $derived({
 const giantHead: Enemy = $derived({
   flowchart: `
     flowchart-elk TB
+      subgraph Turns+ [Turn ${aLevel.v >= 18 ? 4 : 5}+]
+        C(${itIsTime.effect}<img src=${itIsTime.intent} class="h-10 object-contain" />)
+      end
       subgraph Turns [Turns 1-${aLevel.v >= 18 ? 3 : 4}]
         A(${count.effect}<img src=${count.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n50%</span>)
         B(${glare.effect}<img src=${glare.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n50%</span>)
-      end
-      subgraph Turns+ [Turn ${aLevel.v >= 18 ? 4 : 5}+]
-        C(${itIsTime.effect}<img src=${itIsTime.intent} class="h-10 object-contain" />)
       end
   `,
   img: `${base}/assets/act3/elites/giant-head.webp`,

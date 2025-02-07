@@ -49,42 +49,44 @@ const supportBeam: Move = {
 const bronzeAutomaton: Enemy = $derived({
   flowchart: aLevel.v >= 19
     ? `
-    flowchart-elk TB
-      A(${spawnOrbs.effect}<img src=${spawnOrbs.intent} class="h-10 object-contain" />)
-      B(${boost.effect}<img src=${boost.intent} class="h-10 object-contain" />)
-      B2(${boost.effect}<img src=${boost.intent} class="h-10 object-contain" />)
-      B3(${boost.effect}<img src=${boost.intent} class="h-10 object-contain" />)
-      C(${flail.effect}<img src=${flail.intent} class="h-10 object-contain" />)
-      C2(${flail.effect}<img src=${flail.intent} class="h-10 object-contain" />)
-      D(${hyperBeam.effect}<img src=${hyperBeam.intent} class="h-10 object-contain" />)
-      subgraph Bronze [<img src=${base}/assets/act2/bosses/bronze-automaton.webp class="h-10 object-contain inline" />]
+    flowchart LR
+      subgraph Automaton
         direction LR
+        A(${spawnOrbs.effect}<img src=${spawnOrbs.intent} class="h-10 object-contain" />)
+        B(${boost.effect}<img src=${boost.intent} class="h-10 object-contain" />)
+        B2(${boost.effect}<img src=${boost.intent} class="h-10 object-contain" />)
+        B3(${boost.effect}<img src=${boost.intent} class="h-10 object-contain" />)
+        C(${flail.effect}<img src=${flail.intent} class="h-10 object-contain" />)
+        C2(${flail.effect}<img src=${flail.intent} class="h-10 object-contain" />)
+        D(${hyperBeam.effect}<img src=${hyperBeam.intent} class="h-10 object-contain" />)
         A==>C==>B==>C2==>B2==>D==>B3==>C
       end
-      subgraph Orb [<img src=${base}/assets/act2/bosses/bronze-orb.webp class="h-10 object-contain inline" />]
+      subgraph Orb
         E(${stasis.effect}<img src=${stasis.intent} class="h-10 object-contain" /><span class="text-xs">75%\nCard Stolen: 0%</span>)  
         F(${beam.effect}<img src=${beam.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n7.5%\nCard Stolen: 30%</span>)  
         G(${supportBeam.effect}<img src=${supportBeam.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n17.5%\nCard Stolen: 70%</span>)  
       end
+      Automaton~~~Orb
   `
     : `
-    flowchart-elk TB
-      A(${spawnOrbs.effect}<img src=${spawnOrbs.intent} class="h-10 object-contain" />)
-      B(${boost.effect}<img src=${boost.intent} class="h-10 object-contain" />)
-      B2(${boost.effect}<img src=${boost.intent} class="h-10 object-contain" />)
-      C(${flail.effect}<img src=${flail.intent} class="h-10 object-contain" />)
-      C2(${flail.effect}<img src=${flail.intent} class="h-10 object-contain" />)
-      D(${hyperBeam.effect}<img src=${hyperBeam.intent} class="h-10 object-contain" />)  
-      E(Stunned<img src='${base}/assets/intents/stun.png' class="h-10 object-contain" />)
-      subgraph Bronze [<img src=${base}/assets/act2/bosses/bronze-automaton.webp class="h-10 object-contain inline" />]
+    flowchart LR
+      subgraph Automaton
         direction LR
+        A(${spawnOrbs.effect}<img src=${spawnOrbs.intent} class="h-10 object-contain" />)
+        C(${flail.effect}<img src=${flail.intent} class="h-10 object-contain" />)
+        B(${boost.effect}<img src=${boost.intent} class="h-10 object-contain" />)
+        B2(${boost.effect}<img src=${boost.intent} class="h-10 object-contain" />)
+        C2(${flail.effect}<img src=${flail.intent} class="h-10 object-contain" />)
+        D(${hyperBeam.effect}<img src=${hyperBeam.intent} class="h-10 object-contain" />)  
+        E(Stunned<img src='${base}/assets/intents/stun.png' class="h-10 object-contain" />)
         A==>C==>B==>C2==>B2==>D==>E==>C
       end
-      subgraph Orb [<img src=${base}/assets/act2/bosses/bronze-orb.webp class="h-10 object-contain inline" />]
-        F(${stasis.effect}<img src=${stasis.intent} class="h-10 object-contain" /><span class="text-xs">75%\nCard Stolen: 0%</span>)  
+      subgraph Orb
+          F(${stasis.effect}<img src=${stasis.intent} class="h-10 object-contain" /><span class="text-xs">75%\nCard Stolen: 0%</span>)  
         G(${beam.effect}<img src=${beam.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n7.5%\nCard Stolen: 30%</span>)  
         H(${supportBeam.effect}<img src=${supportBeam.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n17.5%\nCard Stolen: 70%</span>)  
       end
+      Automaton~~~Orb
   `,
   img: `${base}/assets/act2/bosses/bronze-automaton.webp`,
   name: "Bronze Automaton",

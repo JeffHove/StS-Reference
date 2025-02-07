@@ -22,33 +22,31 @@ const stab: Move = {
 
 const gremlinLeader: Enemy = $derived({
   flowchart: `
-    flowchart-elk TB
-      B0(<img src=${rally.intent} class="h-10 object-contain" /><span class="text-xs">75%</span>)
-      C0(<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">25%</span>)
-      A1(<img src=${encourage.intent} class="h-10 object-contain" /><span class="text-xs">37.5%</span>)
-      B1a(<img src=${rally.intent} class="h-10 object-contain" /><span class="text-xs">50%</span>)
-      B1b(<img src=${rally.intent} class="h-10 object-contain" /><span class="text-xs">62.5%</span>)
-      C1(<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">50%</span>)
-      A2(<img src=${encourage.intent} class="h-10 object-contain" /><span class="text-xs">66%</span>)
-      C2(<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">34%</span>)
+    flowchart-elk LR
       subgraph 0Gremlin [0 Gremlins]
-        B0
-        C0
+        direction LR
+        B0(<img src=${rally.intent} class="h-10 object-contain" /><span class="text-xs">75%</span>)
+        C0(<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">25%</span>)
       end
       subgraph 1Gremlin [1 Gremlin]
+        direction LR
         subgraph prevMoveEncourage [Previous Move <img src=${encourage.intent} class="h-10 object-contain inline" />]
-          B1a
-          C1
+          direction LR
+          B1a(<img src=${rally.intent} class="h-10 object-contain" /><span class="text-xs">50%</span>)
+          C1(<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">50%</span>)
         end
         subgraph prevMoveStab [Previous Move <img src=${stab.intent} class="h-10 object-contain inline" />]
-          A1
-          B1b
+          direction LR
+          A1(<img src=${encourage.intent} class="h-10 object-contain" /><span class="text-xs">37.5%</span>)
+          B1b(<img src=${rally.intent} class="h-10 object-contain" /><span class="text-xs">62.5%</span>)
         end
       end
       subgraph 2Gremlin [2+ Gremlins]
-        A2
-        C2
+        direction LR
+        A2(<img src=${encourage.intent} class="h-10 object-contain" /><span class="text-xs">66%</span>)
+        C2(<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">34%</span>)
       end
+      0Gremlin~~~1Gremlin~~~2Gremlin
   `,
   moves: `
     flowchart-elk TB
