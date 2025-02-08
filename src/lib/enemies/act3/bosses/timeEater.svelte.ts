@@ -32,7 +32,7 @@ const timeEater: Enemy = $derived({
       A(${reverberate.effect}<img src=${reverberate.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n45%</span>)
       B(${headSlam.effect}<img src=${headSlam.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n35%</span>)
       C(${ripple.effect}<img src=${ripple.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\n20%</span>)
-      D(${haste.effect}<img src=${haste.intent} class="h-10 object-contain" /><span class="text-xs">Max Uses: 1\nTrigger: Below 50% HP.</span>)
+      D(${haste.effect}<img src=${haste.intent} class="h-10 object-contain" /><span class="text-xs">Max Uses: 1\nTrigger: Below 50% HP. Does NOT interrupt current intent.</span>)
   `,
   img: `${base}/assets/act3/bosses/time-eater.webp`,
   name: "Time Eater",

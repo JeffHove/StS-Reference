@@ -47,7 +47,7 @@ const awakenedOne: Enemy = $derived({
         A(${slash.effect}<img src=${slash.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\nTurn 1: 100%\n75%</span>)
         B(${soulStrike.effect}<img src=${soulStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1\nTurn 1: 0%\n25%</span>)
       end
-      C(${rebirth.effect}<img src=${rebirth.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: 0 HP.</span>)
+      C(${rebirth.effect}<img src=${rebirth.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: 0 HP. Interrupts current intent.</span>)
       A2(${darkEcho.effect}<img src=${darkEcho.intent} class="h-10 object-contain" />)
       C==>A2==>Awakened
       subgraph Awakened [<img src=${base}/assets/act3/bosses/awakened-one-awakened.webp class="h-10 object-contain inline" />]

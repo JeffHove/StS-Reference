@@ -67,7 +67,7 @@ const acidSlimes: Enemy = $derived({
         A(${corrosiveSpitL.effect}<img src=${corrosiveSpitL.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n${aLevel.v >= 17 ? "40%" : "30%"}</span>)
         B(${lickL.effect}<img src=${lickL.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: ${aLevel.v >= 17 ? 1 : 2}\n30%</span>)
         C(${tackleL.effect}<img src=${tackleL.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: ${aLevel.v >= 17 ? 2 : 1}\n${aLevel.v >= 17 ? "30%" : "40%"}</span>)
-        D(${split.effect}<img src=${split.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: HP reaches 50% or lower.</span>)
+        D(${split.effect}<img src=${split.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: HP reaches 50% or lower. Interrupts current intent.</span>)
       end
       subgraph Medium [<img src=${base}/assets/act1/monsters/acid-slime-m.webp class="h-10 object-contain inline" />]
         A2(${corrosiveSpitM.effect}<img src=${corrosiveSpitM.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n${aLevel.v >= 17 ? "40%" : "30%"}</span>)

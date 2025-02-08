@@ -32,7 +32,7 @@ const slimeBoss: Enemy = $derived({
       A(${goopSpray.effect}<img src=${goopSpray.intent} class="h-10 object-contain" /><span class="text-xs">Start</span>)
       B(${preparing.effect}<img src=${preparing.intent} class="h-10 object-contain" />)
       C(${slam.effect}<img src=${slam.intent} class="h-10 object-contain" />)
-      D(${split.effect}<img src=${split.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: HP reaches 50% or lower.</span>)
+      D(${split.effect}<img src=${split.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: HP reaches 50% or lower. Interrupts current intent.</span>)
     A==>B
     B==>C
     C==>A

@@ -36,7 +36,7 @@ const darkling: Enemy = $derived({
   flowchart: `
     flowchart-elk LR
       D(${reincarnate.effect}<img src=${reincarnate.intent} class="h-10 object-contain" />)
-      E(${regrow.effect}<img src=${regrow.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: 0 HP.</span>)
+      E(${regrow.effect}<img src=${regrow.intent} class="h-10 object-contain" /><span class="text-xs">Trigger: 0 HP. Interrupts current intent.</span>)
       E==>D
       subgraph Middle [Middle Darkling and Outer Darklings Turn 1]
         direction LR

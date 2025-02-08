@@ -53,7 +53,7 @@ const centurionMystic: Enemy = $derived({
         end
       end
       subgraph Mystic [<img src=${base}/assets/act2/monsters/mystic.webp class="h-10 object-contain inline" />]
-        A2(${heal.effect}<img src=${heal.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\nTrigger: An enemy is hurt ${aLevel.v >= 17 ? 21 : 16} or more</span>)
+        A2(${heal.effect}<img src=${heal.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\nTrigger: An enemy is hurt ${aLevel.v >= 17 ? 21 : 16} or more. Does NOT interrupt current intent.</span>)
         B2(${buff.effect}<img src=${buff.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2\n40%</span>)
         C2(${attackDebuff.effect}<img src=${attackDebuff.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: ${aLevel.v >= 17 ? 1 : 2}\n60%</span>)
       end
