@@ -8,7 +8,9 @@
 </script>
 
 {#key enemy.flowchart}
-  <Graph flowchart={enemy.flowchart} moves={enemy.moves} />
+  {#key enemy.moves}
+    <Graph flowchart={enemy.flowchart} moves={enemy.moves} />
+  {/key}
 {/key}
 
 {#if enemy.slug === "gremlin-leader"}
