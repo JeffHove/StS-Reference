@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { aLevel } from "$lib/shared.svelte";
   import { base } from "$app/paths";
+  import { aLevel } from "$lib/shared.svelte";
 </script>
 
 <div class="flex rounded border-1 border-secondary pr-4">

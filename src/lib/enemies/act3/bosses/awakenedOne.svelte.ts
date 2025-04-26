@@ -1,5 +1,5 @@
-import { type Enemy, type Move } from "$lib/types";
 import { base } from "$app/paths";
+import { type Enemy, type Move } from "$lib/types";
 
 // Unawakened
 const slash: Move = {

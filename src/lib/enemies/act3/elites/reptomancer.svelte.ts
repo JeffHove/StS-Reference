@@ -1,6 +1,6 @@
+import { base } from "$app/paths";
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
-import { base } from "$app/paths";
 
 const summon: Move = $derived({
   effect: `Spawns ${aLevel.v >= 18 ? 2 : "a"} Dagger.`,
@@ -53,13 +53,13 @@ const reptomancer: Enemy = $derived({
         D==>E
       end
   `,
+  img: `${base}/assets/act3/elites/reptomancer.webp`,
   moves: `
     flowchart-elk TB
       A(${summon.effect}<img src=${summon.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2</span>)
       B(${snakeStrike.effect}<img src=${snakeStrike.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
       C(${bigBite.effect}<img src=${bigBite.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
   `,
-  img: `${base}/assets/act3/elites/reptomancer.webp`,
   name: "Reptomancer",
   slug: "reptomancer",
 });

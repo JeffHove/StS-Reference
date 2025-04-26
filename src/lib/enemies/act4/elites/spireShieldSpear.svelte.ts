@@ -1,6 +1,6 @@
+import { base } from "$app/paths";
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
-import { base } from "$app/paths";
 
 // Shield
 const bash: Move = $derived({

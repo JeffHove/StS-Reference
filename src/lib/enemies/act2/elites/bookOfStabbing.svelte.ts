@@ -1,6 +1,6 @@
+import { base } from "$app/paths";
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
-import { base } from "$app/paths";
 
 const multiStab: Move = $derived({
   effect: `${aLevel.v >= 3 ? 7 : 6} x N Damage. N = 2 + ${aLevel.v >= 18 ? "Multi/Single Stabs" : "Multi-Stabs"} used`,

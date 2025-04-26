@@ -1,6 +1,6 @@
+import { base } from "$app/paths";
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
-import { base } from "$app/paths";
 
 const roar: Move = $derived({
   effect: `${aLevel.v >= 17 ? 5 : 3} Weak. ${aLevel.v >= 17 ? 5 : 3} Frail.`,

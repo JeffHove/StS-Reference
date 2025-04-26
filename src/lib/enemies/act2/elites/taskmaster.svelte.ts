@@ -1,6 +1,6 @@
+import { base } from "$app/paths";
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
-import { base } from "$app/paths";
 
 // Master
 const scouringWhip: Move = $derived({
@@ -40,7 +40,6 @@ const entangle: Move = {
   intent: `${base}/assets/intents/debuff2.png`,
   name: "Entangle",
 };
-
 
 const taskmaster: Enemy = $derived({
   flowchart: aLevel.v >= 17

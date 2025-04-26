@@ -1,6 +1,6 @@
+import { base } from "$app/paths";
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
-import { base } from "$app/paths";
 
 const buff: Move = $derived({
   effect: `Group ${aLevel.v >= 4 ? (aLevel.v >= 19 ? 5 : 4) : 3} Strength. ${aLevel.v >= 4 ? (aLevel.v >= 19 ? 23 : 18) : 15} Block.`,
@@ -54,6 +54,7 @@ const theCollector: Enemy = $derived({
         end
       end
   `,
+  img: `${base}/assets/act2/bosses/the-collector.webp`,
   moves: `
     flowchart-elk TB
       A(${buff.effect}<img src=${buff.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
@@ -61,7 +62,6 @@ const theCollector: Enemy = $derived({
       C(${megaDebuff.effect}<img src=${megaDebuff.intent} class="h-10 object-contain" />)
       D(${spawn.effect}<img src=${spawn.intent} class="h-10 object-contain" />)
   `,
-  img: `${base}/assets/act2/bosses/the-collector.webp`,
   name: "The Collector",
   slug: "the-collector",
 });

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import { page } from "$app/state";
   import {
     act1Bosses,
@@ -14,7 +15,6 @@
     act4Elites,
   } from "$lib/enemies";
   import { type Enemy } from "$lib/types";
-  import { base } from "$app/paths";
 
   const actData = {
     act1: { bosses: act1Bosses, elites: act1Elites, monsters: act1Monsters },

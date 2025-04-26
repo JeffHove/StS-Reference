@@ -1,6 +1,6 @@
+import { base } from "$app/paths";
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
-import { base } from "$app/paths";
 
 const nip: Move = $derived({
   effect: `${aLevel.v >= 2 ? "D + 2" : "D"} Damage. D is chosen between 7 and 11 at the beginning of the battle.`,
@@ -51,13 +51,13 @@ const darkling: Enemy = $derived({
       end
       Middle~~~Outer~~~E
   `,
+  img: `${base}/assets/act3/monsters/darkling.webp`,
   moves: `
     flowchart-elk TB
       A(${nip.effect}<img src=${nip.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2</span>)
       B(${chomp.effect}<img src=${chomp.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
       C(${harden.effect}<img src=${harden.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)  
   `,
-  img: `${base}/assets/act3/monsters/darkling.webp`,
   name: "Darkling",
   slug: "darkling",
 });

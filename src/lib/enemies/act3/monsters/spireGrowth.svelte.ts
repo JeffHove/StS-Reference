@@ -1,6 +1,6 @@
+import { base } from "$app/paths";
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
-import { base } from "$app/paths";
 
 const quickTackle: Move = $derived({
   effect: `${aLevel.v >= 2 ? 18 : 16} Damage.`,

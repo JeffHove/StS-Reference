@@ -1,6 +1,6 @@
+import { base } from "$app/paths";
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
-import { base } from "$app/paths";
 
 const encourage: Move = $derived({
   effect: `Group ${aLevel.v >= 3 ? (aLevel.v >= 18 ? 5 : 4) : 3} Strength. Group ${aLevel.v >= 18 ? 10 : 6} Block.`,
@@ -48,13 +48,13 @@ const gremlinLeader: Enemy = $derived({
       end
       0Gremlin~~~1Gremlin~~~2Gremlin
   `,
+  img: `${base}/assets/act2/elites/gremlin-leader.webp`,
   moves: `
     flowchart-elk TB
       A(${encourage.effect}<img src=${encourage.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
       B(${rally.effect}<img src=${rally.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
       C(${stab.effect}<img src=${stab.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
   `,
-  img: `${base}/assets/act2/elites/gremlin-leader.webp`,
   name: "Gremlin Leader",
   slug: "gremlin-leader",
 });

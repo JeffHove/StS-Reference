@@ -1,9 +1,9 @@
 export type Enemy = {
   flowchart: string
   img: string
+  moves?: string | undefined
   name: string
   slug: string
-  moves?: string | undefined
 };
 
 export type Move = {

@@ -1,6 +1,6 @@
+import { base } from "$app/paths";
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
-import { base } from "$app/paths";
 
 const debuff: Move = $derived({
   effect: `${aLevel.v >= 18 ? 5 : 3} Burn into discard.`,
@@ -33,13 +33,13 @@ const nemesis: Enemy = $derived({
         B1(<img src=${attack.intent} class="h-10 object-contain" /><span class="text-xs">50%</span>)
       end
   `,
+  img: `${base}/assets/act3/elites/nemesis.webp`,
   moves: `
     flowchart-elk TB
       A(${debuff.effect}<img src=${debuff.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)
       B(${attack.effect}<img src=${attack.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 2</span>)
       C(${scythe.effect}<img src=${scythe.intent} class="h-10 object-contain" /><span class="text-xs">Max In a Row: 1</span>)  
   `,
-  img: `${base}/assets/act3/elites/nemesis.webp`,
   name: "Nemesis",
   slug: "nemesis",
 });

@@ -1,6 +1,6 @@
+import { base } from "$app/paths";
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
-import { base } from "$app/paths";
 
 const defensiveStance: Move = $derived({
   effect: `${aLevel.v >= 9 ? (aLevel.v >= 19 ? 20 : 18) : 15} Block. ${aLevel.v >= 9 ? (aLevel.v >= 19 ? 7 : 6) : 5} Metallicize.`,

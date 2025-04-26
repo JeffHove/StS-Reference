@@ -1,6 +1,6 @@
+import { base } from "$app/paths";
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
-import { base } from "$app/paths";
 
 const laser: Move = $derived({
   effect: `${aLevel.v >= 2 ? 11 : 10} Damage. 1 Burn into draw. 1 Burn into discard.`,

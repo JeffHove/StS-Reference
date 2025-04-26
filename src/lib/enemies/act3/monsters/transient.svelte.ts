@@ -1,6 +1,6 @@
+import { base } from "$app/paths";
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
-import { base } from "$app/paths";
 
 const attack: Move = $derived({
   effect: `${aLevel.v >= 2 ? 40 : 30} + X*10 Damage. X = Turn - 1`,

@@ -1,6 +1,6 @@
+import { base } from "$app/paths";
 import { aLevel } from "$lib/shared.svelte";
 import { type Enemy, type Move } from "$lib/types";
-import { base } from "$app/paths";
 
 const incantation: Move = $derived({
   effect: `${aLevel.v >= 2 ? (aLevel.v >= 17 ? 5 : 4) : 3} Ritual.`,

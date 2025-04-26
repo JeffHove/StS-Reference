@@ -1,7 +1,7 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import Ascension from "$lib/components/Ascension.svelte";
   import GitHub from "$lib/components/GitHub.svelte";
-  import { base } from "$app/paths";
 
   import "../app.css";
   let { children } = $props();
